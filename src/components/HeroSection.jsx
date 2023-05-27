@@ -218,7 +218,7 @@ export default function HeroSection() {
                                     top: { xs: '-30px', sm: '-50px' },
                                 }}
                             >
-                                $200,000,000
+                                $75,254,548
                                 <ArrowDropDownIcon
                                     sx={{ color: '#451D5D', mt: { xs: -1, sm: 0 } }}
                                 />

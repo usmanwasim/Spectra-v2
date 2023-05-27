@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Container, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import Typewriter from 'typewriter-effect';
@@ -7,49 +7,60 @@ import Typewriter from 'typewriter-effect';
 import final from '../assets/final.mp4';
 
 export default function HeroSection() {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
     return (
         <>
             <Box
                 sx={{
                     position: 'relative',
                     zIndex: '-10',
+                    width: '100%',
+                    height: { xs: '45vh', sm: '60vh', md: '80vh' },
                     overflow: 'hidden',
                 }}
             >
                 <video
-                    height="100%"
                     autoPlay
                     muted
                     loop
-                    style={{ zIndex: '-10', maxWidth: isMobile ? 'auto' : '100%' }}
+                    style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        minWidth: '100%',
+                        minHeight: '100%',
+                        zIndex: -1,
+                    }}
                 >
                     <source src={final} type="video/mp4" />
                 </video>
+
                 <Box
                     width="100%"
                     height="100%"
                     sx={{
                         position: 'absolute',
-                        top: '0px',
-                        left: '0px',
-                        right: '0px',
-                        bottom: '0px',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}
                 >
                     <Container>
-                        <Box width={{ xs: '100%', sm: '80%', md: '65%' }} mx="auto">
+                        <Box
+                            width={{ xs: '100%', sm: '80%', md: '65%' }}
+                            mx="auto"
+                            py={{ xs: 5, sm: 3, md: 4 }}
+                            zIndex={99999}
+                        >
                             <Typography
                                 sx={{
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '900',
-                                    fontSize: { xs: '20px', sm: '45px', md: '64px' },
+                                    fontSize: { xs: '32px', sm: '45px', md: '64px' },
                                     textAlign: 'center',
                                     textTransform: 'capitalize',
                                     color: '#FFFFFF',
@@ -74,7 +85,7 @@ export default function HeroSection() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '400',
-                                    fontSize: { xs: '10px', sm: '17px', md: '20px' },
+                                    fontSize: { xs: '13px', sm: '17px', md: '20px' },
                                     textAlign: 'center',
                                     textTransform: 'capitalize',
                                     color: '#FFFFFF',
@@ -91,7 +102,7 @@ export default function HeroSection() {
                 </Box>
             </Box>
 
-            <Box sx={{ mt: { xs: -3, sm: -10, md: -12 }, zIndex: '99999' }}>
+            <Box sx={{ mt: { xs: -5, sm: -10, md: -12 }, zIndex: '99999' }}>
                 <Container>
                     <Box
                         sx={{
@@ -123,9 +134,10 @@ export default function HeroSection() {
                                 fontStyle="normal"
                                 bgcolor="#F15950"
                                 borderRadius="5px"
-                                fontSize="10px"
-                                px={1}
-                                mt={1}
+                                letterSpacing="1px"
+                                fontSize={{ xs: '7px', sm: '10px' }}
+                                px={{ xs: 1, sm: 1 }}
+                                mt={{ xs: 0.7, sm: 1 }}
                                 py="3px"
                             >
                                 Live

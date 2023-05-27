@@ -82,7 +82,7 @@ export default function Tokenomics() {
                             value={value}
                             onChange={handleChange}
                             sx={{
-                                '&.MuiTabs-indicator': {
+                                '& .MuiTabs-indicator': {
                                     display: 'none',
                                 },
                             }}
@@ -165,7 +165,7 @@ export default function Tokenomics() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '700',
-                                    fontSize: { xs: '18px', sm: '19px', md: '20px' },
+                                    fontSize: { xs: '14px', sm: '17px', md: '20px' },
                                     textAlign: 'left',
                                     color: '#000000',
                                     ml: { xs: 0, md: 5 },

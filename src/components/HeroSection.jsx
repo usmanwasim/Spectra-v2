@@ -70,7 +70,7 @@ export default function HeroSection() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '900',
-                                    fontSize: { xs: '26px', sm: '45px', md: '64px' },
+                                    fontSize: { xs: '40px', sm: '45px', md: '64px' },
                                     textAlign: 'center',
                                     textTransform: 'capitalize',
                                     color: '#FFFFFF',

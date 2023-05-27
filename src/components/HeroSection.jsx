@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-    Box,
-    Button,
-    Chip,
-    Container,
-    Stack,
-    Typography,
-    useMediaQuery,
-    useTheme,
-} from '@mui/material';
+import { Box, Button, Container, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import Typewriter from 'typewriter-effect';
@@ -26,7 +17,6 @@ export default function HeroSection() {
                     position: 'relative',
                     zIndex: '-10',
                     overflow: 'hidden',
-                    height: isMobile ? '450px' : 'auto',
                 }}
             >
                 <video
@@ -59,7 +49,7 @@ export default function HeroSection() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '900',
-                                    fontSize: { xs: '40px', sm: '45px', md: '64px' },
+                                    fontSize: { xs: '20px', sm: '45px', md: '64px' },
                                     textAlign: 'center',
                                     textTransform: 'capitalize',
                                     color: '#FFFFFF',
@@ -84,7 +74,7 @@ export default function HeroSection() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '400',
-                                    fontSize: { xs: '14px', sm: '17px', md: '20px' },
+                                    fontSize: { xs: '10px', sm: '17px', md: '20px' },
                                     textAlign: 'center',
                                     textTransform: 'capitalize',
                                     color: '#FFFFFF',
@@ -112,23 +102,34 @@ export default function HeroSection() {
                     >
                         <Typography
                             sx={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                gap: 1,
                                 fontFamily: 'Aileron',
                                 fontStyle: 'normal',
                                 fontWeight: '900',
                                 fontSize: { xs: '18px', sm: '24px', md: '32px' },
                                 textAlign: 'left',
-                                textTransform: 'capitalize',
+                                // textTransform: 'capitalize',
                                 color: '#FFFFFF',
                             }}
                         >
-                            Pre Sale{' '}
-                            <Chip
-                                color="warning"
-                                sx={{
-                                    borderRadius: '0px',
-                                }}
-                                label="Live"
-                            />
+                            Presale is now
+                            <Box
+                                width="max-content"
+                                height="max-content"
+                                fontFamily="Aileron"
+                                fontStyle="normal"
+                                bgcolor="#F15950"
+                                borderRadius="5px"
+                                fontSize="10px"
+                                px={1}
+                                mt={1}
+                                py="3px"
+                            >
+                                Live
+                            </Box>
                         </Typography>
                         <Typography
                             sx={{
@@ -155,33 +156,19 @@ export default function HeroSection() {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 color: '#ffffff',
-                                mt: 1,
-                                mb: { xs: 3, sm: 0 },
+                                mt: { xs: 0.3, sm: 1 },
+                                mb: { xs: 5, sm: 0 },
                             }}
                         >
-                            <Box
-                                sx={{
-                                    fontWeight: '500',
-                                    fontSize: { xs: '12px', sm: '16px', md: '20px' },
-                                }}
-                            >
-                                1 SCT:
-                            </Box>
-                            <Box
-                                sx={{
-                                    fontWeight: '700',
-                                    fontSize: { xs: '14px', sm: '16px', md: '26px' },
-                                }}
-                            >
-                                $1.15
-                            </Box>
+                            $1.15
                         </Typography>
 
                         <Box
                             sx={{
                                 width: '100%',
-                                height: '25px',
+                                height: { xs: '15px', sm: '25px' },
                                 bgcolor: '#451D5D',
+                                borderRadius: '50px',
                                 my: 3,
                                 position: 'relative',
                             }}
@@ -191,7 +178,7 @@ export default function HeroSection() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '500',
-                                    fontSize: { xs: '15px', sm: '16px', md: '17px' },
+                                    fontSize: { xs: '10px', sm: '13px', md: '15px' },
                                     textAlign: 'right',
                                     textTransform: 'capitalize',
                                     color: '#ffffff',
@@ -208,27 +195,28 @@ export default function HeroSection() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '500',
-                                    fontSize: { xs: '13px', sm: '14px', md: '15px' },
+                                    fontSize: { xs: '11px', sm: '13px', md: '15px' },
                                     textAlign: 'right',
                                     textTransform: 'capitalize',
                                     color: '#ffffff',
                                     px: 1,
                                     position: 'absolute',
-                                    right: '-10px',
-                                    top: { xs: '-30px', sm: '-50px' },
+                                    right: '0px',
+                                    top: { xs: '-30px', sm: '-40px' },
                                 }}
                             >
                                 $200,000,000
                                 <ArrowDropDownIcon
-                                    sx={{ color: '#451D5D', mt: { xs: -1, sm: 0 } }}
+                                    sx={{ color: '#451D5D', mt: { xs: -1, sm: '-5px' } }}
                                 />
                             </Stack>
 
                             <Box
                                 sx={{
-                                    width: '42%',
+                                    width: '24%',
                                     height: '100%',
                                     bgcolor: '#ffffff',
+                                    borderRadius: '50px',
                                     position: 'absolute',
                                     top: '0px',
                                     left: '0px',
@@ -239,7 +227,7 @@ export default function HeroSection() {
                                         fontFamily: 'Aileron',
                                         fontStyle: 'normal',
                                         fontWeight: '700',
-                                        fontSize: { xs: '15px', sm: '16px', md: '17px' },
+                                        fontSize: { xs: '10px', sm: '13px', md: '15px' },
                                         textAlign: 'right',
                                         textTransform: 'capitalize',
                                         color: '#650B9D',
@@ -247,7 +235,7 @@ export default function HeroSection() {
                                         position: 'relative',
                                     }}
                                 >
-                                    42%
+                                    24%
                                 </Typography>
                                 <Stack
                                     direction="column"
@@ -256,19 +244,19 @@ export default function HeroSection() {
                                         fontFamily: 'Aileron',
                                         fontStyle: 'normal',
                                         fontWeight: '500',
-                                        fontSize: { xs: '13px', sm: '14px', md: '15px' },
+                                        fontSize: { xs: '11px', sm: '13px', md: '15px' },
                                         textAlign: 'right',
                                         textTransform: 'capitalize',
                                         color: '#ffffff',
                                         px: 1,
                                         position: 'absolute',
-                                        right: '-10px',
-                                        top: { xs: '-30px', sm: '-50px' },
+                                        right: '0px',
+                                        top: { xs: '-30px', sm: '-40px' },
                                     }}
                                 >
                                     $75,254,548
                                     <ArrowDropDownIcon
-                                        sx={{ color: '#ffffff', mt: { xs: -1, sm: 0 } }}
+                                        sx={{ color: '#ffffff', mt: { xs: -1, sm: '-5px' } }}
                                     />
                                 </Stack>
                             </Box>

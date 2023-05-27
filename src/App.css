@@ -8,7 +8,7 @@
 @font-face {
   font-family: 'Aileron';
   src: url('./assets/fonts/Aileron-Bold.otf') format('truetype');
-  font-weight: bold;
+  font-weight: 900;
   font-style: normal;
 }
 

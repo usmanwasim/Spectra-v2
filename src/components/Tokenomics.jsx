@@ -130,7 +130,7 @@ export default function Tokenomics() {
                                 style={{ width: '100%', height: '40vh' }}
                             />
                         </Grid> */}
-                        <Grid item xs={12} sm={6} md={6}>
+                        <Grid item xs={12} md={5}>
                             <Box sx={{ position: 'relative' }}>
                                 <img src={tokenchart} alt="" height="100%" width="100%" />
                                 <Box
@@ -147,7 +147,7 @@ export default function Tokenomics() {
                                 </Box>
                             </Box>
                         </Grid>
-                        <Grid item xs={12} sm={4} md={4}>
+                        <Grid item xs={12} md={5}>
                             <Typography
                                 sx={{
                                     fontFamily: 'Aileron',
@@ -168,7 +168,7 @@ export default function Tokenomics() {
                                     fontSize: { xs: '14px', sm: '17px', md: '20px' },
                                     textAlign: 'left',
                                     color: '#000000',
-                                    ml: { xs: 0, md: 5 },
+                                    ml: { xs: 0, md: '10px' },
                                 }}
                             >
                                 <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>

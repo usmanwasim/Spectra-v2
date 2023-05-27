@@ -45,7 +45,7 @@ export default function Faq() {
                     >
                         FAQs
                     </Typography>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={{ xs: 0, md: 2 }}>
                         <Grid item xs={12} md={6}>
                             {accordiantData.map(({ heading, detail }, i) => (
                                 <MuiAccordion
@@ -108,18 +108,18 @@ export default function Faq() {
                                     expanded={expanded === i + 4 ? true : false}
                                     onClick={() => setExpanded(i + 4)}
                                     sx={{
-                                        my: { xs: 2, sm: 3 },
+                                        mb: { xs: 2, sm: 3 },
                                         borderBottom: '2px solid #650B9D',
                                     }}
                                 >
                                     <MuiAccordionSummary
                                         sx={{ minHeight: '70px' }}
                                         expandIcon={
-                                            expanded === i ? (
-                                                <DownIcon sx={{ color: '#000' }} />
-                                            ) : (
-                                                <RightIcon sx={{ color: '#000' }} />
-                                            )
+                                            <DownIcon sx={{ color: '#000' }} />
+                                            // expanded === i ? (
+                                            // ) : (
+                                            //     <RightIcon sx={{ color: '#000' }} />
+                                            // )
                                         }
                                     >
                                         <Typography

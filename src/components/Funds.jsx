@@ -4,6 +4,7 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import fund1 from '../assets/fund1.png';
 import fund2 from '../assets/fund2.png';
 import fund3 from '../assets/fund3.png';
+import fundbg from '../assets/fundbg.png';
 import Partners from './Partners';
 
 const data = [
@@ -27,7 +28,17 @@ const data = [
 export default function Funds() {
     return (
         <>
-            <Box py={{ xs: 5, sm: 7, md: 10 }}>
+            <Box py={{ xs: 5, sm: 7, md: 10 }} position="relative">
+                <Box
+                    width={{ xs: '60%', md: '35%' }}
+                    height={{ xs: 'auto', md: '80%' }}
+                    position="absolute"
+                    zIndex={-10}
+                    top="20%"
+                    left="0%"
+                >
+                    <img src={fundbg} alt="" width="100%" height="100%" />
+                </Box>
                 <Container>
                     <Typography
                         sx={{

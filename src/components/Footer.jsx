@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import React from 'react';
 
-import logo from '../assets/logo.svg';
+import logo from '../assets/Footer-logo.png';
 import linkedin from '../assets/linkedin.svg';
 import facebook from '../assets/facebook.svg';
 import youtube from '../assets/youtube.svg';
@@ -37,7 +37,7 @@ export default function Footer() {
                                 key={index}
                             >
                                 <Box>
-                                    {index === 0 && <img src={logo} alt="logo" />}
+                                    {index === 0 && <img src={logo} alt="logo" width="85px" />}
                                     {val.map((item, i) => (
                                         <Typography
                                             key={i}

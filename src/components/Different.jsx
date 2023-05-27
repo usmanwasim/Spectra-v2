@@ -36,7 +36,7 @@ export default function Different() {
         <>
             <Box sx={{ py: { xs: 5, sm: 7, md: 10 } }}>
                 <Container>
-                    <Grid container spacing={2} alignItems="center">
+                    <Grid container spacing={5} alignItems="center">
                         <Grid item xs={12} md={5}>
                             <Box>
                                 <Typography

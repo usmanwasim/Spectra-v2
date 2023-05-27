@@ -136,9 +136,12 @@ export default function HeroSection() {
                                 borderRadius="5px"
                                 letterSpacing="1px"
                                 fontSize={{ xs: '7px', sm: '10px' }}
-                                px={{ xs: 1, sm: 1 }}
-                                mt={{ xs: 0.7, sm: 1 }}
+                                px={{ xs: '5px', sm: 1 }}
+                                // mt={{ xs: 0.7, sm: 1 }}
                                 py="3px"
+                                sx={{
+                                    color: '#000000',
+                                }}
                             >
                                 Live
                             </Box>
@@ -148,7 +151,9 @@ export default function HeroSection() {
                                 fontFamily: 'Aileron',
                                 fontStyle: 'normal',
                                 fontWeight: '700',
-                                fontSize: { xs: '15px', sm: '18px', md: '24px' },
+                                fontSize: { xs: '10px', sm: '18px', md: '24px' },
+                                lineHeight: { xs: '12px', md: '29px' },
+                                letterSpacing: '0.05em',
                                 textAlign: 'left',
                                 textTransform: 'capitalize',
                                 color: '#FFFFFF',
@@ -164,11 +169,13 @@ export default function HeroSection() {
                                 fontSize: { xs: '14px', sm: '20px', md: '26px' },
                                 textAlign: 'left',
                                 textTransform: 'capitalize',
+                                lineHeight: '25px',
+                                letterSpacing: '0.05em',
                                 display: 'flex',
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 color: '#ffffff',
-                                mt: { xs: 0.3, sm: 1 },
+                                mt: { xs: 0.3, md: '30px' },
                                 mb: { xs: 5, sm: 0 },
                             }}
                         >

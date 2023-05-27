@@ -16,12 +16,14 @@ export default function Confidence() {
                             fontWeight: '900',
                             fontSize: { xs: '32px', sm: '45px', md: '64px' },
                             textAlign: 'center',
+                            lineHeight: { xs: 1.5, md: '77px' },
+                            letterSpacing: '0.03em',
                             textTransform: 'capitalize',
                             color: '#303030',
                             mb: { xs: 3, sm: 4, md: 5 },
                         }}
                     >
-                        Invest with<span style={{ color: '#650B9D' }}>confidence</span>
+                        Invest with <span style={{ color: '#650B9D' }}>Confidence</span>
                     </Typography>
                     <Grid container spacing={2} alignItems="center">
                         <Grid item xs={12} md={6}>

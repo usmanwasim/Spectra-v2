@@ -1,5 +1,14 @@
 import React from 'react';
-import { Box, Button, Chip, Container, Stack, Typography } from '@mui/material';
+import {
+    Box,
+    Button,
+    Chip,
+    Container,
+    Stack,
+    Typography,
+    useMediaQuery,
+    useTheme,
+} from '@mui/material';
 import { styled } from '@mui/material/styles';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import Typewriter from 'typewriter-effect';
@@ -19,15 +28,25 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 
 export default function HeroSection() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <>
             <Box
                 sx={{
                     position: 'relative',
                     zIndex: '-10',
+                    height: isMobile ? '450px' : 'auto',
                 }}
             >
-                <video width="100%" height="100%" autoPlay muted loop style={{ zIndex: '-10' }}>
+                <video
+                    height="100%"
+                    autoPlay
+                    muted
+                    loop
+                    style={{ zIndex: '-10', maxWidth: isMobile ? 'auto' : '100%' }}
+                >
                     <source src={final} type="video/mp4" />
                 </video>
                 <Box
@@ -58,14 +77,17 @@ export default function HeroSection() {
                                     width: '100%',
                                 }}
                             >
-                                <Typewriter
-                                    options={{
-                                        strings: 'Decentralized Hedgefund',
-                                        autoStart: true,
-                                        loop: true,
-                                    }}
-                                    sx={{ color: '' }}
-                                />
+                                Decentralized
+                                <span>
+                                    <Typewriter
+                                        options={{
+                                            strings: 'Hedgefund',
+                                            autoStart: true,
+                                            loop: true,
+                                        }}
+                                        sx={{ color: '#650B9D' }}
+                                    />
+                                </span>
                                 Leveraging AI
                             </Typography>
                             <Typography

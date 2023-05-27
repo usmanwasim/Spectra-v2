@@ -25,6 +25,7 @@ export default function HeroSection() {
                 sx={{
                     position: 'relative',
                     zIndex: '-10',
+                    overflow: 'hidden',
                     height: isMobile ? '450px' : 'auto',
                 }}
             >

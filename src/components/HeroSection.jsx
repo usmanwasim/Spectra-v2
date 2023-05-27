@@ -1,23 +1,40 @@
 import React from 'react';
-import { Box, Button, Chip, Container, Stack, Typography, useMediaQuery } from '@mui/material';
+import {
+    Box,
+    Button,
+    Chip,
+    Container,
+    Stack,
+    Typography,
+    useMediaQuery,
+    useTheme,
+} from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import Typewriter from 'typewriter-effect';
 
 import final from '../assets/final.mp4';
-import { AddBoxSharp } from '@mui/icons-material';
 
 export default function HeroSection() {
-    const matches = useMediaQuery('(man-width:600px)');
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <>
             <Box
                 sx={{
                     position: 'relative',
                     zIndex: '-10',
+                    height: isMobile ? '450px' : 'auto',
                 }}
             >
-                <video width="100%" height="100%" autoPlay muted loop style={{ zIndex: '-10' }}>
+                <video
+                    height="100%"
+                    autoPlay
+                    muted
+                    loop
+                    style={{ zIndex: '-10', maxWidth: isMobile ? 'auto' : '100%' }}
+                >
                     <source src={final} type="video/mp4" />
                 </video>
                 <Box
@@ -41,21 +58,24 @@ export default function HeroSection() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '900',
-                                    fontSize: { xs: '26px', sm: '45px', md: '64px' },
+                                    fontSize: { xs: '40px', sm: '45px', md: '64px' },
                                     textAlign: 'center',
                                     textTransform: 'capitalize',
                                     color: '#FFFFFF',
                                     width: '100%',
                                 }}
                             >
-                                <Typewriter
-                                    options={{
-                                        strings: 'Decentralized Hedgefund',
-                                        autoStart: true,
-                                        loop: true,
-                                    }}
-                                    sx={{ color: '' }}
-                                />
+                                Decentralized
+                                <span>
+                                    <Typewriter
+                                        options={{
+                                            strings: 'Hedgefund',
+                                            autoStart: true,
+                                            loop: true,
+                                        }}
+                                        sx={{ color: '#650B9D' }}
+                                    />
+                                </span>
                                 Leveraging AI
                             </Typography>
                             <Typography

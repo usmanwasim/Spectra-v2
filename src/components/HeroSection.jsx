@@ -14,7 +14,7 @@ export default function HeroSection() {
                     position: 'relative',
                     zIndex: '-10',
                     width: '100%',
-                    height: { xs: '45vh', sm: '60vh', md: '80vh' },
+                    height: { xs: '450px', sm: '60vh', md: '80vh' },
                     overflow: 'hidden',
                 }}
             >
@@ -102,7 +102,7 @@ export default function HeroSection() {
                 </Box>
             </Box>
 
-            <Box sx={{ mt: { xs: -5, sm: -10, md: -12 }, zIndex: '99999' }}>
+            <Box sx={{ mt: { xs: -8, sm: -10, md: -12 }, zIndex: '99999' }}>
                 <Container>
                     <Box
                         sx={{

@@ -7,6 +7,27 @@ import Tab from '@mui/material/Tab';
 
 import tokenimg from '../assets/tokenimg.png';
 import tokenchart from '../assets/token-chart.png';
+import tokenchart1 from '../assets/token-chart1.png';
+
+function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box sx={{ p: 3 }}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
 
 // const option = {
 //     tooltip: {
@@ -118,80 +139,158 @@ export default function Tokenomics() {
                             />
                         </Tabs>
                     </Box>
-                    <Grid
-                        container
-                        rowSpacing={10}
-                        alignItems="center"
-                        justifyContent="space-between"
-                    >
-                        {/* <Grid item xs={9} sm={8} md={6}>
+                    <TabPanel value={value} index={1}>
+                        <Grid
+                            container
+                            rowSpacing={10}
+                            alignItems="center"
+                            justifyContent="space-between"
+                        >
+                            {/* <Grid item xs={9} sm={8} md={6}>
                             <ReactEcharts
                                 option={option}
                                 style={{ width: '100%', height: '40vh' }}
                             />
                         </Grid> */}
-                        <Grid item xs={12} md={5}>
-                            <Box sx={{ position: 'relative' }}>
-                                <img src={tokenchart} alt="" height="100%" width="100%" />
-                                <Box
+                            <Grid item xs={12} md={5}>
+                                <Box sx={{ position: 'relative' }}>
+                                    <img src={tokenchart1} alt="" height="100%" width="100%" />
+                                    <Box
+                                        sx={{
+                                            width: { xs: '20%', sm: '22%', md: '28%' },
+                                            height: { xs: '20%', sm: '22%', md: '28%' },
+                                            position: 'absolute',
+                                            top: { xs: '92%', sm: '35%' },
+                                            left: { xs: '40%', sm: '95%' },
+                                            transform: { xs: 'rotate(90deg)', sm: 'rotate(0deg)' },
+                                        }}
+                                    >
+                                        <img src={tokenimg} alt="" height="100%" width="100%" />
+                                    </Box>
+                                </Box>
+                            </Grid>
+                            <Grid item xs={12} md={5}>
+                                <Typography
                                     sx={{
-                                        width: { xs: '20%', sm: '22%', md: '28%' },
-                                        height: { xs: '20%', sm: '22%', md: '28%' },
-                                        position: 'absolute',
-                                        top: { xs: '92%', sm: '35%' },
-                                        left: { xs: '40%', sm: '95%' },
-                                        transform: { xs: 'rotate(90deg)', sm: 'rotate(0deg)' },
+                                        fontFamily: 'Aileron',
+                                        fontStyle: 'normal',
+                                        fontWeight: '900',
+                                        fontSize: { xs: '24px', sm: '28px', md: '32px' },
+                                        color: '#000000',
+                                        pb: 1,
                                     }}
                                 >
-                                    <img src={tokenimg} alt="" height="100%" width="100%" />
+                                    Fund distrubtion
+                                </Typography>
+                                <Box
+                                    sx={{
+                                        fontFamily: 'Aileron',
+                                        fontStyle: 'normal',
+                                        fontWeight: '700',
+                                        fontSize: { xs: '12px', sm: '17px', md: '19px' },
+                                        textAlign: 'left',
+                                        color: '#000000',
+                                        ml: { xs: 0, md: '10px' },
+                                    }}
+                                >
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        40% - Investments in portfolio of projects
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        40% - Investments in other ICO/cryptocurrency
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        10% - Fund management
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        5% - Marketing
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        3% - Reserve
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        2% - Legal
+                                    </li>
                                 </Box>
-                            </Box>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={12} md={5}>
-                            <Typography
-                                sx={{
-                                    fontFamily: 'Aileron',
-                                    fontStyle: 'normal',
-                                    fontWeight: '900',
-                                    fontSize: { xs: '24px', sm: '28px', md: '32px' },
-                                    color: '#000000',
-                                    pb: 1,
-                                }}
-                            >
-                                Token allocation
-                            </Typography>
-                            <Box
-                                sx={{
-                                    fontFamily: 'Aileron',
-                                    fontStyle: 'normal',
-                                    fontWeight: '700',
-                                    fontSize: { xs: '14px', sm: '17px', md: '20px' },
-                                    textAlign: 'left',
-                                    color: '#000000',
-                                    ml: { xs: 0, md: '10px' },
-                                }}
-                            >
-                                <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
-                                    50% - ICO
-                                </li>
-                                <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
-                                    20% - Pre-ICO
-                                </li>
-                                <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
-                                    10% - Founders & Team
-                                </li>
-                                <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
-                                    6% - Reserve & Bonus Tokens for Pre-ICO
-                                </li>
-                                <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
-                                    5% - Advisers
-                                </li>
-                                <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
-                                    3% - Bounty
-                                </li>
-                            </Box>
+                    </TabPanel>
+                    <TabPanel value={value} index={0}>
+                        <Grid
+                            container
+                            rowSpacing={10}
+                            alignItems="center"
+                            justifyContent="space-between"
+                        >
+                            {/* <Grid item xs={9} sm={8} md={6}>
+                            <ReactEcharts
+                                option={option}
+                                style={{ width: '100%', height: '40vh' }}
+                            />
+                        </Grid> */}
+                            <Grid item xs={12} md={5}>
+                                <Box sx={{ position: 'relative' }}>
+                                    <img src={tokenchart} alt="" height="100%" width="100%" />
+                                    <Box
+                                        sx={{
+                                            width: { xs: '20%', sm: '22%', md: '28%' },
+                                            height: { xs: '20%', sm: '22%', md: '28%' },
+                                            position: 'absolute',
+                                            top: { xs: '92%', sm: '35%' },
+                                            left: { xs: '40%', sm: '95%' },
+                                            transform: { xs: 'rotate(90deg)', sm: 'rotate(0deg)' },
+                                        }}
+                                    >
+                                        <img src={tokenimg} alt="" height="100%" width="100%" />
+                                    </Box>
+                                </Box>
+                            </Grid>
+                            <Grid item xs={12} md={5}>
+                                <Typography
+                                    sx={{
+                                        fontFamily: 'Aileron',
+                                        fontStyle: 'normal',
+                                        fontWeight: '900',
+                                        fontSize: { xs: '24px', sm: '28px', md: '32px' },
+                                        color: '#000000',
+                                        pb: 1,
+                                    }}
+                                >
+                                    Token allocation
+                                </Typography>
+                                <Box
+                                    sx={{
+                                        fontFamily: 'Aileron',
+                                        fontStyle: 'normal',
+                                        fontWeight: '700',
+                                        fontSize: { xs: '15px', sm: '17px', md: '20px' },
+                                        textAlign: 'left',
+                                        color: '#000000',
+                                        ml: { xs: 0, md: '10px' },
+                                    }}
+                                >
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        50% - ICO
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        20% - Pre-ICO
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        10% - Founders & Team
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        6% - Reserve & Bonus Tokens for Pre-ICO
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        5% - Advisers
+                                    </li>
+                                    <li style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                                        3% - Bounty
+                                    </li>
+                                </Box>
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </TabPanel>
                 </Container>
             </Box>
         </>

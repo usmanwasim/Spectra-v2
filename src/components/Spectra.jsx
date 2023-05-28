@@ -1,13 +1,18 @@
 import React from 'react';
-import { Box, Container, Grid, Stack, Typography } from '@mui/material';
+import { Box, Container, Grid, Stack, Typography, useTheme, useMediaQuery } from '@mui/material';
 
-import spectraimg from '../assets/spectra-img.png';
+import spectraLaptop from '../assets/spectra-laptop.png';
+import spectraTab from '../assets/spectra-tab.png';
+import spectraCircle from '../assets/spectra-circle.png';
+
 import spectra1 from '../assets/spectra1.png';
 import spectra2 from '../assets/spectra2.png';
 import spectra3 from '../assets/spectra3.png';
 import spectra4 from '../assets/spectra4.png';
 
 export default function Spectra() {
+    const theme = useTheme();
+    const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <>
             <Box sx={{ py: { xs: 5, sm: 7, md: 10 } }}>
@@ -28,8 +33,47 @@ export default function Spectra() {
                     </Typography>
                     <Grid container spacing={2} alignItems="center">
                         <Grid item xs={12} md={6}>
-                            <Box>
-                                <img src={spectraimg} alt="spectra" width="100%" />
+                            <Box
+                                sx={{
+                                    position: 'relative',
+                                    background: `url(${spectraLaptop})`,
+                                    width: { xs: '100%', sm: '100%' },
+                                    mx: 'auto',
+                                    height: '50vh',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundSize: 'contain',
+                                    backgroundPosition: 'center center',
+                                }}
+                                className="laptop"
+                            >
+                                <img
+                                    src={spectraTab}
+                                    alt="spectra"
+                                    width="50%"
+                                    style={{
+                                        position: 'absolute',
+                                        top: isMatch ? '25%' : '12%',
+                                        left: '2%',
+                                        right: '0%',
+                                        bottom: '0%',
+                                        zIndex: 10,
+                                    }}
+                                    className="spectra"
+                                />
+                                <img
+                                    src={spectraCircle}
+                                    alt="spectra1"
+                                    width="30%"
+                                    style={{
+                                        position: 'absolute',
+                                        top: isMatch ? '2%' : '-8%',
+                                        left: '58%',
+                                        right: '0%',
+                                        bottom: '0%',
+                                        zIndex: 10,
+                                    }}
+                                    className="circle"
+                                />
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -47,9 +91,13 @@ export default function Spectra() {
                                     Access to{' '}
                                     <span style={{ color: '#650B9D' }}>Promising Projects</span>
                                 </Typography>
-                                <Stack direction="row" spacing={2} mt={{ xs: 1.5, sm: 2 }}>
+                                <Stack
+                                    direction="row"
+                                    spacing={{ xs: 1, sm: 2 }}
+                                    mt={{ xs: 0.8, sm: 2 }}
+                                >
                                     <Box>
-                                        <img src={spectra1} alt="1" />
+                                        <img src={spectra1} alt="" width="40px" />
                                     </Box>
                                     <Typography
                                         sx={{
@@ -57,7 +105,6 @@ export default function Spectra() {
                                             fontStyle: 'normal',
                                             fontWeight: '400',
                                             fontSize: { xs: '12px', sm: '14px', md: '16px' },
-                                            textAlign: 'left',
                                             color: '#303030',
                                         }}
                                     >
@@ -85,7 +132,7 @@ export default function Spectra() {
                                 </Typography>
                                 <Stack direction="row" spacing={2} mt={{ xs: 1.5, sm: 2 }}>
                                     <Box>
-                                        <img src={spectra2} alt="2" />
+                                        <img src={spectra2} alt="2" width="40px" />
                                     </Box>
                                     <Typography
                                         sx={{
@@ -119,7 +166,7 @@ export default function Spectra() {
                                 </Typography>
                                 <Stack direction="row" spacing={2} mt={{ xs: 1.5, sm: 2 }}>
                                     <Box>
-                                        <img src={spectra3} alt="3" />
+                                        <img src={spectra3} alt="3" width="40px" />
                                     </Box>
                                     <Typography
                                         sx={{
@@ -155,7 +202,7 @@ export default function Spectra() {
                                 </Typography>
                                 <Stack direction="row" spacing={2} mt={{ xs: 1.5, sm: 2 }}>
                                     <Box>
-                                        <img src={spectra4} alt="4" />
+                                        <img src={spectra4} alt="4" width="40px" />
                                     </Box>
                                     <Typography
                                         sx={{

@@ -103,11 +103,19 @@ export default function Different() {
                                             <Stack
                                                 direction="row"
                                                 alignItems="center"
-                                                gap={2}
+                                                gap={{ xs: 1, sm: 2 }}
                                                 mb={1}
                                             >
-                                                <Box sx={{ xs: '35px', sm: '42px', md: '50px' }}>
-                                                    <img src={img} alt="" />
+                                                <Box
+                                                    sx={{
+                                                        width: {
+                                                            xs: '35px',
+                                                            sm: '42px',
+                                                            md: '50px',
+                                                        },
+                                                    }}
+                                                >
+                                                    <img src={img} alt="" width="100%" />
                                                 </Box>
                                                 <Typography
                                                     sx={{
@@ -164,11 +172,19 @@ export default function Different() {
                                             <Stack
                                                 direction="row"
                                                 alignItems="center"
-                                                gap={2}
+                                                gap={{ xs: 1, sm: 2 }}
                                                 mb={1}
                                             >
-                                                <Box sx={{ xs: '35px', sm: '42px', md: '50px' }}>
-                                                    <img src={img} alt="" />
+                                                <Box
+                                                    sx={{
+                                                        width: {
+                                                            xs: '35px',
+                                                            sm: '4xs:1,sm:2px',
+                                                            md: '50px',
+                                                        },
+                                                    }}
+                                                >
+                                                    <img src={img} alt="" width="100%" />
                                                 </Box>
                                                 <Typography
                                                     sx={{

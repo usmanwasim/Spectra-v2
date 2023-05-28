@@ -18,6 +18,20 @@ export default function HeroSection() {
                     overflow: 'hidden',
                 }}
             >
+                <Box
+                    sx={{
+                        bgcolor: '#650C9D20',
+                        // background:
+                        //     'linear-gradient(98.72deg, #650B9D10 32.87%, #9876D110 104.38%), conic-gradient(from 229.69deg at 50% 50%, #650B9D10 0deg, rgba(94, 60, 115, 0) 360deg), linear-gradient(0deg, #FFFFFF10, #FFFFFF10)',
+                        width: '100%',
+                        height: '100%',
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        zIndex: -1,
+                    }}
+                ></Box>
                 <video
                     autoPlay
                     muted
@@ -29,7 +43,7 @@ export default function HeroSection() {
                         transform: 'translate(-50%, -50%)',
                         minWidth: '100%',
                         minHeight: '100%',
-                        zIndex: -1,
+                        zIndex: -2,
                     }}
                 >
                     <source src={final} type="video/mp4" />
@@ -68,14 +82,13 @@ export default function HeroSection() {
                                 }}
                             >
                                 Decentralized
-                                <span>
+                                <span style={{ color: '#BDA1CF' }}>
                                     <Typewriter
                                         options={{
                                             strings: 'Hedgefund',
                                             autoStart: true,
                                             loop: true,
                                         }}
-                                        sx={{ color: '#650B9D' }}
                                     />
                                 </span>
                                 Leveraging AI
@@ -120,7 +133,8 @@ export default function HeroSection() {
                                 fontFamily: 'Aileron',
                                 fontStyle: 'normal',
                                 fontWeight: '900',
-                                fontSize: { xs: '18px', sm: '24px', md: '32px' },
+                                letterSpacing: '1px',
+                                fontSize: { xs: '16px', sm: '24px', md: '32px' },
                                 textAlign: 'left',
                                 // textTransform: 'capitalize',
                                 color: '#FFFFFF',
@@ -133,12 +147,12 @@ export default function HeroSection() {
                                 fontFamily="Aileron"
                                 fontStyle="normal"
                                 bgcolor="#F15950"
-                                borderRadius="5px"
+                                borderRadius="3px"
                                 letterSpacing="1px"
-                                fontSize={{ xs: '7px', sm: '10px' }}
+                                fontSize={{ xs: '6px', sm: '10px' }}
                                 px={{ xs: '5px', sm: 1 }}
                                 // mt={{ xs: 0.7, sm: 1 }}
-                                py="3px"
+                                py="1px"
                                 sx={{
                                     color: '#000000',
                                 }}
@@ -166,7 +180,7 @@ export default function HeroSection() {
                                 fontFamily: 'Aileron',
                                 fontStyle: 'normal',
                                 fontWeight: '900',
-                                fontSize: { xs: '14px', sm: '20px', md: '26px' },
+                                fontSize: { xs: '12px', sm: '20px', md: '26px' },
                                 textAlign: 'left',
                                 textTransform: 'capitalize',
                                 lineHeight: '25px',
@@ -176,7 +190,7 @@ export default function HeroSection() {
                                 alignItems: 'center',
                                 color: '#ffffff',
                                 mt: { xs: 0.3, md: '30px' },
-                                mb: { xs: 5, sm: 0 },
+                                mb: { xs: -2, sm: 0 },
                             }}
                         >
                             $1.15
@@ -185,7 +199,7 @@ export default function HeroSection() {
                         <Box
                             sx={{
                                 width: '100%',
-                                height: { xs: '15px', sm: '25px' },
+                                height: { xs: '10px', sm: '25px' },
                                 bgcolor: '#451D5D',
                                 borderRadius: '50px',
                                 my: 3,
@@ -194,11 +208,13 @@ export default function HeroSection() {
                         >
                             <Typography
                                 sx={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'right',
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '500',
-                                    fontSize: { xs: '10px', sm: '13px', md: '15px' },
-                                    textAlign: 'right',
+                                    fontSize: { xs: '6px', sm: '13px', md: '15px' },
                                     textTransform: 'capitalize',
                                     color: '#ffffff',
                                     px: 1,
@@ -214,14 +230,15 @@ export default function HeroSection() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '500',
-                                    fontSize: { xs: '11px', sm: '13px', md: '15px' },
+                                    fontSize: { xs: '7px', sm: '13px', md: '15px' },
+                                    letterSpacing: '1px',
                                     textAlign: 'right',
                                     textTransform: 'capitalize',
                                     color: '#ffffff',
                                     px: 1,
                                     position: 'absolute',
                                     right: '0px',
-                                    top: { xs: '-30px', sm: '-40px' },
+                                    top: { xs: '-22px', sm: '-40px' },
                                 }}
                             >
                                 $200,000,000
@@ -232,7 +249,7 @@ export default function HeroSection() {
 
                             <Box
                                 sx={{
-                                    width: '24%',
+                                    width: '42%',
                                     height: '100%',
                                     bgcolor: '#ffffff',
                                     borderRadius: '50px',
@@ -246,7 +263,7 @@ export default function HeroSection() {
                                         fontFamily: 'Aileron',
                                         fontStyle: 'normal',
                                         fontWeight: '700',
-                                        fontSize: { xs: '10px', sm: '13px', md: '15px' },
+                                        fontSize: { xs: '6px', sm: '13px', md: '15px' },
                                         textAlign: 'right',
                                         textTransform: 'capitalize',
                                         color: '#650B9D',
@@ -254,23 +271,24 @@ export default function HeroSection() {
                                         position: 'relative',
                                     }}
                                 >
-                                    24%
+                                    42%
                                 </Typography>
                                 <Stack
                                     direction="column"
-                                    alignItems="end"
+                                    alignItems="center"
                                     sx={{
                                         fontFamily: 'Aileron',
                                         fontStyle: 'normal',
                                         fontWeight: '500',
-                                        fontSize: { xs: '11px', sm: '13px', md: '15px' },
+                                        fontSize: { xs: '7px', sm: '13px', md: '15px' },
+                                        letterSpacing: '1px',
                                         textAlign: 'right',
                                         textTransform: 'capitalize',
                                         color: '#ffffff',
                                         px: 1,
                                         position: 'absolute',
                                         right: '0px',
-                                        top: { xs: '-30px', sm: '-40px' },
+                                        top: { xs: '-22px', sm: '-40px' },
                                     }}
                                 >
                                     $75,254,548
@@ -289,7 +307,7 @@ export default function HeroSection() {
                                     fontWeight: '700',
                                     fontSize: { xs: '10px', sm: '15px', md: '17px' },
                                     textAlign: 'center',
-                                    padding: '5px 15px',
+                                    padding: '2px 15px',
                                     border: '1px solid #ffffff',
                                     color: '#ffffff',
                                     borderRadius: '0px',
@@ -303,9 +321,9 @@ export default function HeroSection() {
                                     fontFamily: 'Aileron',
                                     fontStyle: 'normal',
                                     fontWeight: '700',
-                                    fontSize: { xs: '10px', sm: '15px', md: '17px' },
+                                    fontSize: { xs: '8px', sm: '15px', md: '17px' },
                                     textAlign: 'center',
-                                    padding: '5px 15px',
+                                    padding: '2px 15px',
                                     background: '#ffffff',
                                     color: '#650B9D',
                                     borderRadius: '0px',

@@ -67,8 +67,8 @@ export default function Invest() {
                                     }}
                                 >
                                     <Stack direction="row" alignItems="baseline" gap={2} mb={1}>
-                                        <Box sx={{ xs: '35px', sm: '42px', md: '50px' }}>
-                                            <img src={img} alt="" />
+                                        <Box sx={{ width: { xs: '40px', sm: '45px', md: '50px' } }}>
+                                            <img src={img} alt="" width="100%" />
                                         </Box>
                                         <Typography
                                             sx={{

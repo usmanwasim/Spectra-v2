@@ -13,7 +13,7 @@ const data = [
     ],
     ['Products', 'NFT', 'Buy', 'Trade'],
     ['Support', 'Help Center', 'Trading Fees', 'Contact Us'],
-    ['Legal', 'Privacy Policy', 'Terms of Services', 'Agreements'],
+    ['Legals', 'Terms of Services', 'Privacy Policy', 'Agreements'],
 ];
 
 export default function Footer() {
@@ -24,20 +24,24 @@ export default function Footer() {
                     <Grid
                         container
                         spacing={5}
-                        alignItems="center"
+                        // alignItems="center"
                         // justifyContent="center"
                         pb={{ xs: 3, sm: 4, md: 5 }}
                     >
                         {data.map((val, index) => (
                             <Grid
                                 item
-                                xs={index === 0 ? 9 : 6}
+                                xs={index === 0 ? 11 : 6}
                                 sm={index === 0 ? 9 : 4}
                                 md={index === 0 ? 6 : 2}
                                 key={index}
                             >
                                 <Box>
-                                    {index === 0 && <img src={logo} alt="logo" width="85px" />}
+                                    {index === 0 && (
+                                        <Box width={{ xs: '105px' }}>
+                                            <img src={logo} alt="logo" width="100%" />
+                                        </Box>
+                                    )}
                                     {val.map((item, i) => (
                                         <Typography
                                             key={i}
@@ -45,15 +49,39 @@ export default function Footer() {
                                                 mt: 1,
                                                 fontFamily: 'Aileron',
                                                 fontStyle: 'normal',
-                                                fontWeight: i === 0 && index !== 0 ? '700' : '400',
-                                                fontSize: { xs: '15px', sm: '17px', md: '20px' },
+                                                letterSpacing: '1px',
+                                                width: {
+                                                    xs: '100%',
+                                                    md: i === 0 && index === 0 ? '77%' : '100%',
+                                                },
+                                                fontWeight: i === 0 && index !== 0 ? '900' : '400',
+                                                fontSize: {
+                                                    xs:
+                                                        i === 0 && index === 0
+                                                            ? '9px'
+                                                            : i !== 0
+                                                            ? '14px'
+                                                            : '20px',
+                                                    sm: '17px',
+                                                    md:
+                                                        i === 0 && index !== 0
+                                                            ? '20px'
+                                                            : i === 0
+                                                            ? '14px'
+                                                            : '16px',
+                                                },
                                             }}
                                         >
                                             {item}
                                         </Typography>
                                     ))}
                                     {index === 0 && (
-                                        <Stack direction="row" alignItems="center" gap={2} mt={2}>
+                                        <Stack
+                                            direction="row"
+                                            alignItems="center"
+                                            gap={{ xs: 1, sm: 2 }}
+                                            mt={2}
+                                        >
                                             <img src={linkedin} alt="linkedin" />
                                             <img src={facebook} alt="facebook" />
                                             <img src={youtube} alt="youtube" />
@@ -64,14 +92,15 @@ export default function Footer() {
                             </Grid>
                         ))}
                     </Grid>
-                    <Box py={2} sx={{ borderTop: '2px solid #B85FF0' }}>
+                    <Box py={2} sx={{ borderTop: { xs: 'none', sm: '2px solid #B85FF0' } }}>
                         <Typography
                             sx={{
                                 fontFamily: 'Aileron',
                                 fontStyle: 'normal',
                                 fontWeight: '400',
-                                fontSize: { xs: '15px', sm: '17px', md: '20px' },
+                                fontSize: { xs: '10px', sm: '17px', md: '20px' },
                                 textAlign: 'center',
+                                letterSpacing: { xs: '0.5px', sm: '1px' },
                             }}
                         >
                             Copyright ©2023 spectra all rights reserved.

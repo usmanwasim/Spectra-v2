@@ -1,7 +1,8 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 
-import confidenceimg from '../assets/confidenceimg.png';
+import confidenceMobile from '../assets/confidence-mobile.png';
+import confidenceTab from '../assets/confidence-tab.png';
 import confidencearrow from '../assets/confidence-arrow.png';
 
 export default function Confidence() {
@@ -118,8 +119,32 @@ export default function Confidence() {
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
-                            <Box sx={{ my: { xs: 5, sm: 3 } }}>
-                                <img src={confidenceimg} alt="confidence" width="100%" />
+                            <Box
+                                sx={{
+                                    position: 'relative',
+                                    background: `url(${confidenceMobile})`,
+                                    width: { xs: '80%', sm: '80%' },
+                                    ml: 'auto',
+                                    height: '50vh',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundSize: 'contain',
+                                    backgroundPosition: 'center center',
+                                }}
+                            >
+                                <img
+                                    src={confidenceTab}
+                                    alt="confidence"
+                                    width="60%"
+                                    style={{
+                                        position: 'absolute',
+                                        top: '13%',
+                                        left: '-10%',
+                                        right: '0%',
+                                        bottom: '0%',
+                                        zIndex: 10,
+                                    }}
+                                    className="confidence"
+                                />
                             </Box>
                         </Grid>
                     </Grid>

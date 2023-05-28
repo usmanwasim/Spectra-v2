@@ -1,25 +1,198 @@
 @font-face {
-  font-family: 'Aileron';
-  src: url('./assets/fonts/Aileron-Regular.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Aileron';
+    src: url('./assets/fonts/Aileron-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Aileron';
-  src: url('./assets/fonts/Aileron-Bold.otf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
+    font-family: 'Aileron';
+    src: url('./assets/fonts/Aileron-Bold.otf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Aileron';
-  src: url('./assets/fonts/Aileron-SemiBold.otf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Aileron';
+    src: url('./assets/fonts/Aileron-SemiBold.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
 
 body {
     padding: 0px;
     margin: 0px;
+}
+
+.animation {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    width: 50px;
+    z-index: -10;
+    transform: translateX(-50%);
+    animation: moveUpDown 60s linear infinite;
+}
+
+@keyframes moveUpDown {
+    0% {
+        top: 0%;
+        rotate: 0deg;
+    }
+    50% {
+        top: 100%;
+        rotate: 180deg;
+    }
+    100% {
+        top: 0%;
+        rotate: 360deg;
+    }
+}
+.animation:nth-child(0) {
+    animation-delay: 5s;
+    left: 10%;
+    width: 380px;
+}
+.animation:nth-child(1) {
+    animation-delay: 10s;
+    left: 32%;
+    width: 320px;
+}
+.animation:nth-child(2s) {
+    animation-delay: 15s;
+    left: 60%;
+    width: 160px;
+}
+.animation:nth-child(3) {
+    animation-delay: 20s;
+    left: 85%;
+    width: 120px;
+}
+.animation:nth-child(4) {
+    animation-delay: 25s;
+    left: 40%;
+    width: 110px;
+}
+.animation:nth-child(5) {
+    animation-delay: 30s;
+    left: 30%;
+    width: 135px;
+}
+.animation:nth-child(6) {
+    animation-delay: 35s;
+    left: 20%;
+    width: 138px;
+}
+.animation:nth-child(7) {
+    animation-delay: 40s;
+    left: 23%;
+    width: 140px;
+}
+.animation:nth-child(8) {
+    animation-delay: 45s;
+    left: 60%;
+    width: 132px;
+}
+.animation:nth-child(9) {
+    animation-delay: 2s;
+    left: 55%;
+    width: 255px;
+}
+.animation:nth-child(10) {
+    animation-delay: 0s;
+    left: 25%;
+    width: 258px;
+}
+.animation:nth-child(11) {
+    animation-delay: 28s;
+    left: 48%;
+    width: 176px;
+}
+.animation:nth-child(12) {
+    animation-delay: 23s;
+    left: 24%;
+    width: 146px;
+}
+.animation:nth-child(13) {
+    animation-delay: 33s;
+    left: 20%;
+    width: 158px;
+}
+.animation:nth-child(14) {
+    animation-delay: 17s;
+    left: 84%;
+    width: 138px;
+}
+.animation:nth-child(15) {
+    animation-delay: 13s;
+    left: 66%;
+    width: 148px;
+}
+.animation:nth-child(16) {
+    animation-delay: 3s;
+    left: 38%;
+    width: 175px;
+}
+.animation:nth-child(17) {
+    animation-delay: 8s;
+    left: 39%;
+    width: 189px;
+}
+
+.confidence {
+    animation: confi 2.5s linear infinite;
+}
+@keyframes confi {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(-15px, -15px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.spectra {
+    animation: spectra 2.5s linear infinite;
+}
+@keyframes spectra {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(-10px, 10px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+.circle {
+    animation: circle 2.5s linear infinite;
+}
+@keyframes circle {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+.laptop {
+    animation: laptop 3s linear infinite;
+}
+@keyframes laptop {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }

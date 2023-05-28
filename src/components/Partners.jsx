@@ -26,16 +26,11 @@ export default function Partners() {
                 </Typography>
 
                 <Marquee autoFill={true}>
-                    <Stack
-                        direction="row"
-                        gap={{ xs: 5, sm: 10 }}
-                        pr={{ xs: 5, sm: 10 }}
-                        sx={{ aspectRatio: { xs: '30/1', md: '25/1' } }}
-                    >
-                        <img src={img1} alt="" width="100%" />
-                        <img src={img2} alt="" width="100%" />
-                        <img src={img3} alt="" width="100%" />
-                        <img src={img4} alt="" width="100%" />
+                    <Stack direction="row" gap={{ xs: 3, sm: 10 }} sx={{ aspectRatio: '20/1' }}>
+                        <img src={img1} alt="" />
+                        <img src={img2} alt="" />
+                        <img src={img3} alt="" />
+                        <img src={img4} alt="" />
                     </Stack>
                 </Marquee>
             </Box>

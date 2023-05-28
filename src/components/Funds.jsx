@@ -67,7 +67,7 @@ export default function Funds() {
                                             fontFamily: 'Aileron',
                                             fontStyle: 'normal',
                                             fontWeight: '900',
-                                            fontSize: { xs: '15px', sm: '17px', md: '20px' },
+                                            fontSize: { xs: '18px', sm: '19px', md: '20px' },
                                             color: '#000000',
                                             pb: 1,
                                         }}
@@ -80,7 +80,7 @@ export default function Funds() {
                                             fontFamily: 'Aileron',
                                             fontStyle: 'normal',
                                             fontWeight: '400',
-                                            fontSize: { xs: '12px', sm: '14px', md: '16px' },
+                                            fontSize: { xs: '10px', sm: '14px', md: '16px' },
                                             textAlign: 'left',
                                             color: '#000000',
                                         }}

@@ -1,5 +1,5 @@
 import './App.css';
-import { Box } from '@mui/material';
+import { Box, useTheme, useMediaQuery } from '@mui/material';
 // components
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
@@ -14,9 +14,107 @@ import Faq from './components/Faq';
 import Footer from './components/Footer';
 
 function App() {
+    const theme = useTheme();
+    const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <>
-            <Box>
+            <Box position="relative" overflow="hidden">
+                <img
+                    src="/cion2.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion1.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion4.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion8.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion5.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion7.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion9.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion6.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion4.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion5.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion8.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion6.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion3.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion11.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion7.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
+                <img
+                    src="/cion10.png"
+                    alt=""
+                    className="animation"
+                    style={{ display: isMatch ? 'none' : 'block' }}
+                />
                 <Header />
                 <HeroSection />
                 <Confidence />
@@ -24,11 +122,11 @@ function App() {
                 <Invest />
                 <Different />
                 <Funds />
-                <Tokenomics />
-                <Roadmap />
-                <Faq />
-                <Footer />
             </Box>
+            <Tokenomics />
+            <Roadmap />
+            <Faq />
+            <Footer />
         </>
     );
 }

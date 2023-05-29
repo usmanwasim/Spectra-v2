@@ -79,6 +79,10 @@ export default function HeroSection() {
                                     textTransform: 'capitalize',
                                     color: '#FFFFFF',
                                     width: '100%',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    flexDirection: { xs: 'column', sm: 'row' },
                                 }}
                             >
                                 Decentralized
@@ -91,6 +95,20 @@ export default function HeroSection() {
                                         }}
                                     />
                                 </span>
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    fontFamily: 'Aileron',
+                                    fontStyle: 'normal',
+                                    fontWeight: '900',
+                                    fontSize: { xs: '32px', sm: '45px', md: '64px' },
+                                    textAlign: 'center',
+                                    textTransform: 'capitalize',
+                                    color: '#FFFFFF',
+                                    width: '100%',
+                                }}
+                            >
+                                {' '}
                                 Leveraging AI
                             </Typography>
                             <Typography

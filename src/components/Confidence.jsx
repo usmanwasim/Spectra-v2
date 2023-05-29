@@ -3,6 +3,7 @@ import React from 'react';
 
 import confidenceMobile from '../assets/confidence-mobile.png';
 import confidenceTab from '../assets/confidence-tab.png';
+import confidenceShadow from '../assets/confidence-shadow.png';
 import confidencearrow from '../assets/confidence-arrow.png';
 
 export default function Confidence() {
@@ -56,8 +57,31 @@ export default function Confidence() {
                                     of profitable{' '}
                                     <span style={{ color: '#650B9D' }}>blockchain</span> ventures
                                 </Typography>
-                                <Box height={{ xs: '56px', sm: '76px', md: '96px' }}>
-                                    <img src={confidencearrow} alt="" height="100%" />
+                                <Box
+                                    display="flex"
+                                    flexDirection="column"
+                                    height={{ xs: '56px', sm: '76px', md: '96px' }}
+                                    width={{ xs: '12px', sm: '20px' }}
+                                    gap={1}
+                                >
+                                    <img
+                                        src={confidencearrow}
+                                        alt=""
+                                        width="100%"
+                                        className="arrows"
+                                    />
+                                    <img
+                                        src={confidencearrow}
+                                        alt=""
+                                        width="100%"
+                                        className="arrows"
+                                    />
+                                    <img
+                                        src={confidencearrow}
+                                        alt=""
+                                        width="100%"
+                                        className="arrows"
+                                    />
                                 </Box>
                             </Box>
                             <Box>
@@ -86,8 +110,31 @@ export default function Confidence() {
                                 >
                                     Sustainable investment approach
                                 </Typography>
-                                <Box height={{ xs: '56px', sm: '76px', md: '96px' }}>
-                                    <img src={confidencearrow} alt="" height="100%" />
+                                <Box
+                                    display="flex"
+                                    flexDirection="column"
+                                    height={{ xs: '56px', sm: '76px', md: '96px' }}
+                                    width={{ xs: '12px', sm: '20px' }}
+                                    gap={1}
+                                >
+                                    <img
+                                        src={confidencearrow}
+                                        alt=""
+                                        width="100%"
+                                        className="arrows"
+                                    />
+                                    <img
+                                        src={confidencearrow}
+                                        alt=""
+                                        width="100%"
+                                        className="arrows"
+                                    />
+                                    <img
+                                        src={confidencearrow}
+                                        alt=""
+                                        width="100%"
+                                        className="arrows"
+                                    />
                                 </Box>
                             </Box>
                             <Box>
@@ -123,7 +170,7 @@ export default function Confidence() {
                                 sx={{
                                     position: 'relative',
                                     background: `url(${confidenceMobile})`,
-                                    width: { xs: '80%', sm: '80%' },
+                                    width: { xs: '80%', sm: '70%' },
                                     ml: 'auto',
                                     height: '50vh',
                                     backgroundRepeat: 'no-repeat',
@@ -137,13 +184,26 @@ export default function Confidence() {
                                     width="60%"
                                     style={{
                                         position: 'absolute',
-                                        top: '13%',
+                                        top: '16%',
                                         left: '-10%',
                                         right: '0%',
                                         bottom: '0%',
                                         zIndex: 10,
                                     }}
                                     className="confidence"
+                                />
+                                <img
+                                    src={confidenceShadow}
+                                    alt="confidence"
+                                    width="120%"
+                                    style={{
+                                        position: 'absolute',
+                                        top: '40%',
+                                        left: '0%',
+                                        right: '0%',
+                                        bottom: '0%',
+                                        zIndex: -1,
+                                    }}
                                 />
                             </Box>
                         </Grid>

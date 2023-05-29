@@ -77,6 +77,10 @@ export default function Different() {
                                         bgcolor: '#650B9D',
                                         color: '#ffffff',
                                         mt: { xs: 2, md: 3 },
+                                        '&:hover': {
+                                            border: '1px solid #650B9D',
+                                            color: '#650B9D',
+                                        },
                                     }}
                                 >
                                     get started <ArrowForwardIcon />

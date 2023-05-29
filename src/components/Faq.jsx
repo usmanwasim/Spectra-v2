@@ -24,6 +24,8 @@ let accordiantData = [
         heading: 'Is there a minimum investment required to invest in Spectra VC?',
         detail: 'No, there is no minimum investment required to invest in Spectra VC.',
     },
+];
+let accordiantData1 = [
     {
         heading: 'What happens if a project fails?',
         detail: 'Investing in venture capital funds like Spectra VC comes with inherent risks, and not all projects will be successful. However, our team carefully vets potential projects and employs sustainable management practices to minimize these risks.',
@@ -61,9 +63,9 @@ export default function Faq() {
                     >
                         FAQs
                     </Typography>
-                    <Grid container spacing={{ xs: 0, md: 2 }}>
+                    <Grid container spacing={{ xs: 0, md: 5 }}>
                         <Grid item xs={12} md={6}>
-                            {accordiantData.map(({ heading, detail }, i) => (
+                            {accordiantData?.map(({ heading, detail }, i) => (
                                 <MuiAccordion
                                     key={i}
                                     // disableGutters
@@ -72,7 +74,7 @@ export default function Faq() {
                                     expanded={expanded === i ? true : false}
                                     onClick={() => setExpanded(i)}
                                     sx={{
-                                        my: { xs: 2, sm: 3 },
+                                        mb: { xs: 2, sm: 3 },
                                         borderBottom: '2px solid #650B9D',
                                     }}
                                 >
@@ -115,12 +117,12 @@ export default function Faq() {
                             ))}
                         </Grid>
                         <Grid item xs={12} md={6}>
-                            {accordiantData.map(({ heading, detail }, i) => (
+                            {accordiantData1?.map(({ heading, detail }, i) => (
                                 <MuiAccordion
                                     key={i}
                                     disableGutters
                                     elevation={0}
-                                    square
+                                    // square
                                     expanded={expanded === i + 4 ? true : false}
                                     onClick={() => setExpanded(i + 4)}
                                     sx={{
@@ -131,19 +133,19 @@ export default function Faq() {
                                     <MuiAccordionSummary
                                         sx={{ minHeight: '70px' }}
                                         expandIcon={
-                                            // <DownIcon sx={{ color: '#000' }} />
-                                            <RightIcon sx={{ color: '#000' }} />
-                                            // expanded === i ? (
-                                            // ) : (
-                                            // )
+                                            expanded === i + 4 ? (
+                                                <DownIcon sx={{ color: '#000' }} />
+                                            ) : (
+                                                <RightIcon sx={{ color: '#000' }} />
+                                            )
                                         }
                                     >
                                         <Typography
                                             sx={{
                                                 fontFamily: 'Aileron',
                                                 fontStyle: 'normal',
-                                                fontWeight: '900',
-                                                fontSize: { xs: '16px', sm: '17px', md: '20px' },
+                                                fontWeight: '700',
+                                                fontSize: { xs: '15px', sm: '17px', md: '20px' },
                                                 lineHeight: '26px',
                                                 color: '#000000',
                                             }}

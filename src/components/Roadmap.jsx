@@ -21,8 +21,19 @@ export default function Roadmap() {
                 >
                     Roadmap
                 </Typography>
-                <Box sx={{ overflowX: 'auto' }}>
-                    <img src={roadmap} alt="" style={{ minWidth: '1200px', width: '100%' }} />
+                <Box
+                    sx={{
+                        overflowX: 'auto',
+                        width: '95%',
+                        mx: 'auto',
+                        height: { xs: '70vh', sm: '100vh' },
+                    }}
+                >
+                    <img
+                        src={roadmap}
+                        alt=""
+                        style={{ minWidth: '720px', width: '100%', height: '95%' }}
+                    />
                 </Box>
             </Box>
         </>

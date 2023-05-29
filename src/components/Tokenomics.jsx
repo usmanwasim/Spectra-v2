@@ -1,5 +1,5 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 // import ReactEcharts from 'echarts-for-react';
@@ -8,6 +8,8 @@ import Tab from '@mui/material/Tab';
 import tokenimg from '../assets/tokenimg.png';
 import tokenchart from '../assets/token-chart.png';
 import tokenchart1 from '../assets/token-chart1.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -72,6 +74,9 @@ export default function Tokenomics() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <>
             <Box py={{ xs: 5, sm: 7, md: 10 }} bgcolor="#CDBFE2">
@@ -152,24 +157,41 @@ export default function Tokenomics() {
                                 style={{ width: '100%', height: '40vh' }}
                             />
                         </Grid> */}
-                            <Grid item xs={12} md={5}>
+                            <Grid
+                                item
+                                xs={12}
+                                md={5}
+                                rowSpacing={{ xs: 5, sm: 20 }}
+                                data-aos="fade-right"
+                                data-aos-duration="1000"
+                                data-aos-once="true"
+                                data-aos-offset="200"
+                            >
                                 <Box sx={{ position: 'relative' }}>
                                     <img src={tokenchart1} alt="" height="100%" width="100%" />
                                     <Box
                                         sx={{
-                                            width: { xs: '20%', sm: '22%', md: '28%' },
-                                            height: { xs: '20%', sm: '22%', md: '28%' },
+                                            width: { xs: '20%', sm: '15%', md: '28%' },
+                                            height: { xs: '20%', sm: '15%', md: '28%' },
                                             position: 'absolute',
-                                            top: { xs: '92%', sm: '35%' },
-                                            left: { xs: '40%', sm: '95%' },
-                                            transform: { xs: 'rotate(90deg)', sm: 'rotate(0deg)' },
+                                            top: { xs: '95%', md: '35%' },
+                                            left: { xs: '40%', md: '100%' },
+                                            transform: { xs: 'rotate(90deg)', md: 'rotate(0deg)' },
                                         }}
                                     >
                                         <img src={tokenimg} alt="" height="100%" width="100%" />
                                     </Box>
                                 </Box>
                             </Grid>
-                            <Grid item xs={12} md={5}>
+                            <Grid
+                                item
+                                xs={12}
+                                md={5}
+                                data-aos="fade-left"
+                                data-aos-duration="1000"
+                                data-aos-once="true"
+                                data-aos-offset="200"
+                            >
                                 <Typography
                                     sx={{
                                         fontFamily: 'Aileron',
@@ -229,23 +251,37 @@ export default function Tokenomics() {
                             />
                         </Grid> */}
                             <Grid item xs={12} md={5}>
-                                <Box sx={{ position: 'relative' }}>
+                                <Box
+                                    sx={{ position: 'relative' }}
+                                    data-aos="fade-right"
+                                    data-aos-duration="1000"
+                                    data-aos-once="true"
+                                    data-aos-offset="200"
+                                >
                                     <img src={tokenchart} alt="" height="100%" width="100%" />
                                     <Box
                                         sx={{
-                                            width: { xs: '20%', sm: '22%', md: '28%' },
-                                            height: { xs: '20%', sm: '22%', md: '28%' },
+                                            width: { xs: '20%', sm: '15%', md: '28%' },
+                                            height: { xs: '20%', sm: '15%', md: '28%' },
                                             position: 'absolute',
-                                            top: { xs: '92%', sm: '35%' },
-                                            left: { xs: '40%', sm: '95%' },
-                                            transform: { xs: 'rotate(90deg)', sm: 'rotate(0deg)' },
+                                            top: { xs: '92%', md: '35%' },
+                                            left: { xs: '40%', md: '95%' },
+                                            transform: { xs: 'rotate(90deg)', md: 'rotate(0deg)' },
                                         }}
                                     >
                                         <img src={tokenimg} alt="" height="100%" width="100%" />
                                     </Box>
                                 </Box>
                             </Grid>
-                            <Grid item xs={12} md={5}>
+                            <Grid
+                                item
+                                xs={12}
+                                md={5}
+                                data-aos="fade-left"
+                                data-aos-duration="1000"
+                                data-aos-once="true"
+                                data-aos-offset="200"
+                            >
                                 <Typography
                                     sx={{
                                         fontFamily: 'Aileron',

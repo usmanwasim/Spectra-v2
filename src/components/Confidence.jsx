@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography, useTheme, useMediaQuery } from '@mui/material';
 import React from 'react';
 
 import confidenceMobile from '../assets/confidence-mobile.png';
@@ -7,6 +7,9 @@ import confidenceShadow from '../assets/confidence-shadow.png';
 import confidencearrow from '../assets/confidence-arrow.png';
 
 export default function Confidence() {
+    const theme = useTheme();
+    const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <>
             <Box sx={{ my: { xs: 5, sm: 7, md: 10 } }}>
@@ -184,8 +187,8 @@ export default function Confidence() {
                                     width="60%"
                                     style={{
                                         position: 'absolute',
-                                        top: '16%',
-                                        left: '-10%',
+                                        top: isMatch ? '20%' : '10%',
+                                        left: isMatch ? '-5%' : '-10%',
                                         right: '0%',
                                         bottom: '0%',
                                         zIndex: 10,

@@ -162,7 +162,7 @@ body {
         transform: translate(0px, 0px);
     }
     50% {
-        transform: translate(-10px, 10px);
+        transform: translate(-20px, 20px);
     }
     100% {
         transform: translate(0px, 0px);
@@ -183,7 +183,7 @@ body {
     }
 }
 .laptop {
-    animation: laptop 3s linear infinite;
+    animation: laptop 2.5s linear infinite;
 }
 @keyframes laptop {
     0% {

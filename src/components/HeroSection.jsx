@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Stack, Typography, useTheme, useMediaQuery } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import Typewriter from 'typewriter-effect';
@@ -7,6 +7,9 @@ import Typewriter from 'typewriter-effect';
 import final from '../assets/final.mp4';
 
 export default function HeroSection() {
+    const theme = useTheme();
+    const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <>
             <Box
@@ -14,7 +17,7 @@ export default function HeroSection() {
                     position: 'relative',
                     zIndex: '-10',
                     width: '100%',
-                    height: { xs: '450px', sm: '60vh', md: '80vh' },
+                    height: { xs: '450px', md: 'auto' },
                     overflow: 'hidden',
                 }}
             >
@@ -24,7 +27,7 @@ export default function HeroSection() {
                         // background:
                         //     'linear-gradient(98.72deg, #650B9D10 32.87%, #9876D110 104.38%), conic-gradient(from 229.69deg at 50% 50%, #650B9D10 0deg, rgba(94, 60, 115, 0) 360deg), linear-gradient(0deg, #FFFFFF10, #FFFFFF10)',
                         width: '100%',
-                        height: '100%',
+                        height: '95%',
                         position: 'absolute',
                         top: '50%',
                         left: '50%',
@@ -37,12 +40,11 @@ export default function HeroSection() {
                     muted
                     loop
                     style={{
-                        position: 'absolute',
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)',
+                        position: 'relative',
+                        transform: isMatch ? 'translate(-50%, -50%)' : 'unset',
                         minWidth: '100%',
                         minHeight: '100%',
+                        width: isMatch ? 'auto' : '100%',
                         zIndex: -2,
                     }}
                 >

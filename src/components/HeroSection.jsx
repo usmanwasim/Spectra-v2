@@ -17,7 +17,7 @@ export default function HeroSection() {
                     position: 'relative',
                     zIndex: '-10',
                     width: '100%',
-                    height: { xs: '450px', md: '80vh' },
+                    height: { xs: '450px', md: 'auto' },
                     overflow: 'hidden',
                 }}
             >
@@ -27,7 +27,7 @@ export default function HeroSection() {
                         // background:
                         //     'linear-gradient(98.72deg, #650B9D10 32.87%, #9876D110 104.38%), conic-gradient(from 229.69deg at 50% 50%, #650B9D10 0deg, rgba(94, 60, 115, 0) 360deg), linear-gradient(0deg, #FFFFFF10, #FFFFFF10)',
                         width: '100%',
-                        height: '100%',
+                        height: '95%',
                         position: 'absolute',
                         top: '50%',
                         left: '50%',
@@ -40,9 +40,7 @@ export default function HeroSection() {
                     muted
                     loop
                     style={{
-                        position: 'absolute',
-                        top: isMatch ? '50%' : 'unset',
-                        left: isMatch ? '50%' : 'unset',
+                        position: 'relative',
                         transform: isMatch ? 'translate(-50%, -50%)' : 'unset',
                         minWidth: '100%',
                         minHeight: '100%',

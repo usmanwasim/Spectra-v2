@@ -52,7 +52,7 @@ export default function Spectra() {
                                     width="50%"
                                     style={{
                                         position: 'absolute',
-                                        top: isMatch ? '25%' : '12%',
+                                        top: isMatch ? '30%' : '25%',
                                         left: '2%',
                                         right: '0%',
                                         bottom: '0%',
@@ -66,7 +66,7 @@ export default function Spectra() {
                                     width="30%"
                                     style={{
                                         position: 'absolute',
-                                        top: isMatch ? '2%' : '-8%',
+                                        top: isMatch ? '10%' : '2%',
                                         left: '58%',
                                         right: '0%',
                                         bottom: '0%',

@@ -5,6 +5,7 @@ import spectraLaptop from '../assets/spectra-laptop.png';
 import spectraTab from '../assets/spectra-tab.png';
 import spectraCircle from '../assets/spectra-circle.png';
 
+import spectrabg from '../assets/spectra-bg.png';
 import spectra1 from '../assets/spectra1.png';
 import spectra2 from '../assets/spectra2.png';
 import spectra3 from '../assets/spectra3.png';
@@ -31,7 +32,7 @@ export default function Spectra() {
                     >
                         Why Invest in <span style={{ color: '#650B9D' }}>Spectra VC</span>
                     </Typography>
-                    <Grid container spacing={2} alignItems="center">
+                    <Grid container spacing={{ xs: 4, sm: 7, md: 10 }} alignItems="center">
                         <Grid item xs={12} md={6}>
                             <Box
                                 sx={{
@@ -66,7 +67,7 @@ export default function Spectra() {
                                     width="30%"
                                     style={{
                                         position: 'absolute',
-                                        top: isMatch ? '10%' : '2%',
+                                        top: isMatch ? '3%' : '-5%',
                                         left: '58%',
                                         right: '0%',
                                         bottom: '0%',
@@ -76,7 +77,20 @@ export default function Spectra() {
                                 />
                             </Box>
                         </Grid>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={6} position="relative">
+                            <Box
+                                sx={{
+                                    position: 'absolute',
+                                    top: '20%',
+                                    left: '10%',
+                                    right: '0',
+                                    bottom: '0',
+                                    width: '110%',
+                                    height: '70%',
+                                }}
+                            >
+                                <img src={spectrabg} alt="" width="100%" height="100%" />
+                            </Box>
                             <Box>
                                 <Typography
                                     sx={{

@@ -85,13 +85,14 @@ export default function HeroSection() {
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                     flexDirection: { xs: 'column', sm: 'row' },
+                                    gap: { xs: 0, sm: 1, md: 2 },
                                 }}
                             >
                                 Decentralized
                                 <span style={{ color: '#BDA1CF' }}>
                                     <Typewriter
                                         options={{
-                                            strings: 'Hedgefund',
+                                            strings: ' Hedgefund',
                                             autoStart: true,
                                             loop: true,
                                         }}

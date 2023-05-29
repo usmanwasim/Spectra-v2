@@ -49,11 +49,11 @@ export default function Spectra() {
                                 <img
                                     src={spectraTab}
                                     alt="spectra"
-                                    width="50%"
+                                    width="40%"
                                     style={{
                                         position: 'absolute',
-                                        top: isMatch ? '30%' : '25%',
-                                        left: '2%',
+                                        top: isMatch ? '35%' : '30%',
+                                        left: isMatch ? '5%' : '8%',
                                         right: '0%',
                                         bottom: '0%',
                                         zIndex: 10,

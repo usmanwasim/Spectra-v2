@@ -30,7 +30,7 @@ export default function MobileDrawer() {
                 {/* <img src={logo} alt="logo" width="100%" height="100%" /> */}
             </Box>
             <Stack spacing={{ xs: 2, sm: 3, md: 2 }} alignItems="left" my={{ xs: 5, sm: 7 }}>
-                {['Whitepaper', 'Audits', 'NFT', 'Help center', 'Contact us'].map((val, i) => (
+                {['Our Funds', 'Audits', 'Help center', 'Contact us'].map((val, i) => (
                     <Typography
                         key={i}
                         sx={{
@@ -60,6 +60,7 @@ export default function MobileDrawer() {
                         color: '#000000',
                         borderRadius: '0px',
                         width: { xs: '120px', sm: '150px' },
+                        textTransform: 'capitalize',
                     }}
                 >
                     Invest Now
@@ -76,9 +77,10 @@ export default function MobileDrawer() {
                         color: '#fff',
                         borderRadius: '0px',
                         width: { xs: '120px', sm: '150px' },
+                        textTransform: 'capitalize',
                     }}
                 >
-                    Buy coin
+                    Whitepaper
                 </Button>
             </Stack>
         </Box>

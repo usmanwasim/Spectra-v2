@@ -88,9 +88,16 @@ export default function Different() {
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={7}>
-                            <Box>
+                            <Box
+                                sx={{
+                                    overflowX: 'auto',
+                                    width: '100%',
+                                    '&::-webkit-scrollbar': { display: 'none' },
+                                }}
+                            >
                                 <Stack
-                                    direction={{ xs: 'column', sm: 'row' }}
+                                    direction={{ xs: 'row' }}
+                                    minWidth="500px"
                                     spacing={{ xs: 3, sm: 4 }}
                                 >
                                     {data?.map(({ img, title, desc }, i) => (
@@ -159,7 +166,8 @@ export default function Different() {
                                 </Stack>
                                 <Stack
                                     mt={{ xs: 3, sm: 4 }}
-                                    direction={{ xs: 'column', sm: 'row' }}
+                                    direction={{ xs: 'row' }}
+                                    minWidth="500px"
                                     spacing={{ xs: 3, sm: 4 }}
                                 >
                                     {data1?.map(({ img, title, desc }, i) => (

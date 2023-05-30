@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
@@ -87,7 +87,7 @@ export default function Tokenomics() {
                             <>
                                 <Grid
                                     container
-                                    rowSpacing={10}
+                                    rowSpacing={7}
                                     alignItems="center"
                                     justifyContent="space-between"
                                 >
@@ -160,6 +160,7 @@ export default function Tokenomics() {
                                                     },
                                                     color: '#000000',
                                                     pb: 1,
+                                                    textAlign: { xs: 'center', sm: 'left' },
                                                 }}
                                             >
                                                 Fund distrubtion
@@ -170,63 +171,72 @@ export default function Tokenomics() {
                                                     fontStyle: 'normal',
                                                     fontWeight: '700',
                                                     fontSize: {
-                                                        xs: '12px',
+                                                        xs: '16px',
                                                         sm: '17px',
                                                         md: '19px',
                                                     },
                                                     textAlign: 'left',
                                                     color: '#000000',
                                                     ml: { xs: 0, md: '10px' },
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    gap: { xs: 1.5, sm: 0 },
                                                 }}
                                             >
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                    }}
-                                                >
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                        }}
+                                                    ></li>
                                                     40% - Investments in portfolio of projects
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                        }}
+                                                    ></li>
                                                     40% - Investments in other ICO/cryptocurrency
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                        }}
+                                                    ></li>
                                                     10% - Fund management
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                        }}
+                                                    ></li>
                                                     5% - Marketing
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                        }}
+                                                    ></li>
                                                     3% - Reserve
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                        }}
+                                                    ></li>
                                                     2% - Legal
-                                                </li>
+                                                </Stack>
                                             </Box>
                                         </Box>
                                     </Grid>
@@ -236,7 +246,7 @@ export default function Tokenomics() {
                             <>
                                 <Grid
                                     container
-                                    rowSpacing={10}
+                                    rowSpacing={5}
                                     alignItems="center"
                                     justifyContent="space-between"
                                 >
@@ -303,6 +313,7 @@ export default function Tokenomics() {
                                                     },
                                                     color: '#000000',
                                                     pb: 1,
+                                                    textAlign: { xs: 'center', sm: 'left' },
                                                 }}
                                             >
                                                 Token allocation
@@ -320,6 +331,9 @@ export default function Tokenomics() {
                                                     textAlign: 'left',
                                                     color: '#000000',
                                                     ml: { xs: 0, md: '10px' },
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    gap: { xs: 1.5, sm: 0 },
                                                 }}
                                             >
                                                 <li

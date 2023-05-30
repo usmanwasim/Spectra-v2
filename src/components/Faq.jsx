@@ -27,10 +27,6 @@ let accordiantData = [
 ];
 let accordiantData1 = [
     {
-        heading: 'What happens if a project fails?',
-        detail: 'Investing in venture capital funds like Spectra VC comes with inherent risks, and not all projects will be successful. However, our team carefully vets potential projects and employs sustainable management practices to minimize these risks.',
-    },
-    {
         heading: 'How can I track the performance of my investment in Spectra VC?',
         detail: 'Spectra VC provides regular updates and reports on the performance of our investments to our investors.',
     },
@@ -44,7 +40,7 @@ let accordiantData1 = [
     },
 ];
 export default function Faq() {
-    const [expanded, setExpanded] = useState(0);
+    const [expanded, setExpanded] = useState(3);
     return (
         <>
             <Box py={{ xs: 10, sm: 15, md: 20 }}>

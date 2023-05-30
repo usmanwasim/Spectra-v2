@@ -27,6 +27,7 @@ export default function Roadmap() {
                         width: '95%',
                         mx: 'auto',
                         height: { xs: '70vh', sm: '100vh' },
+                        '&::-webkit-scrollbar': { display: 'none' },
                     }}
                 >
                     <img

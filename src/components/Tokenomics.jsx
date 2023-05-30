@@ -170,10 +170,11 @@ export default function Tokenomics() {
                                                     fontStyle: 'normal',
                                                     fontWeight: '700',
                                                     fontSize: {
-                                                        xs: '12px',
-                                                        sm: '17px',
+                                                        xs: '16px',
                                                         md: '19px',
                                                     },
+                                                    lineHeight: '19px',
+                                                    letterSpacing: '0.05em',
                                                     textAlign: 'left',
                                                     color: '#000000',
                                                     ml: { xs: 0, md: '10px' },
@@ -183,6 +184,9 @@ export default function Tokenomics() {
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
                                                     40% - Investments in portfolio of projects
@@ -191,6 +195,9 @@ export default function Tokenomics() {
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
                                                     40% - Investments in other ICO/cryptocurrency
@@ -199,6 +206,9 @@ export default function Tokenomics() {
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
                                                     10% - Fund management
@@ -207,25 +217,34 @@ export default function Tokenomics() {
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
-                                                    5% - Marketing
+                                                    05% - Marketing
                                                 </li>
                                                 <li
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
-                                                    3% - Reserve
+                                                    03% - Reserve
                                                 </li>
                                                 <li
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
-                                                    2% - Legal
+                                                    02% - Legal
                                                 </li>
                                             </Box>
                                         </Box>
@@ -313,8 +332,7 @@ export default function Tokenomics() {
                                                     fontStyle: 'normal',
                                                     fontWeight: '700',
                                                     fontSize: {
-                                                        xs: '15px',
-                                                        sm: '17px',
+                                                        xs: '16px',
                                                         md: '20px',
                                                     },
                                                     textAlign: 'left',
@@ -326,6 +344,9 @@ export default function Tokenomics() {
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
                                                     50% - ICO
@@ -334,6 +355,9 @@ export default function Tokenomics() {
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
                                                     20% - Pre-ICO
@@ -342,6 +366,9 @@ export default function Tokenomics() {
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
                                                     10% - Founders & Team
@@ -350,25 +377,34 @@ export default function Tokenomics() {
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
-                                                    6% - Reserve & Bonus Tokens for Pre-ICO
+                                                    06% - Reserve & Bonus Tokens for Pre-ICO
                                                 </li>
                                                 <li
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
-                                                    5% - Advisers
+                                                    05% - Advisers
                                                 </li>
                                                 <li
                                                     style={{
                                                         fontSize: 'inherit',
                                                         fontWeight: 'inherit',
+                                                        lineHeight: '19px',
+                                                        letterSpacing: '0.05em',
+                                                        marginBottom: '16px',
                                                     }}
                                                 >
-                                                    3% - Bounty
+                                                    03% - Bounty
                                                 </li>
                                             </Box>
                                         </Box>

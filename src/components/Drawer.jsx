@@ -4,6 +4,7 @@ import { Box, Button, IconButton, Stack, SwipeableDrawer, Typography } from '@mu
 // import logo from '../assets/logo.svg';
 import ClearIcon from '@mui/icons-material/Clear';
 import icon from '../assets/menuicon.svg';
+import { HashLink } from 'react-router-hash-link';
 
 export default function MobileDrawer() {
     const [state, setState] = useState({
@@ -43,7 +44,14 @@ export default function MobileDrawer() {
                             color: '#ffffff',
                         }}
                     >
-                        {val}
+                        <HashLink
+                            to={i === 0 ? '#funds' : '/'}
+                            smooth
+                            style={{ textDecoration: 'none', color: '#ffffff' }}
+                            // scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
+                        >
+                            {val}
+                        </HashLink>
                     </Typography>
                 ))}
             </Stack>

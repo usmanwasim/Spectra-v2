@@ -87,7 +87,7 @@ export default function Tokenomics() {
                             <>
                                 <Grid
                                     container
-                                    rowSpacing={7}
+                                    rowSpacing={10}
                                     alignItems="center"
                                     justifyContent="space-between"
                                 >
@@ -173,7 +173,7 @@ export default function Tokenomics() {
                                                     fontSize: {
                                                         xs: '16px',
                                                         sm: '17px',
-                                                        md: '19px',
+                                                        md: '18px',
                                                     },
                                                     lineHeight: '19px',
                                                     letterSpacing: '0.05em',
@@ -182,7 +182,7 @@ export default function Tokenomics() {
                                                     ml: { xs: 0, md: '10px' },
                                                     display: 'flex',
                                                     flexDirection: 'column',
-                                                    gap: { xs: 1.5, sm: 0 },
+                                                    gap: { xs: 2 },
                                                 }}
                                             >
                                                 <Stack direction="row" spacing={1}>
@@ -248,7 +248,7 @@ export default function Tokenomics() {
                             <>
                                 <Grid
                                     container
-                                    rowSpacing={5}
+                                    rowSpacing={7}
                                     alignItems="center"
                                     justifyContent="space-between"
                                 >
@@ -334,75 +334,81 @@ export default function Tokenomics() {
                                                     ml: { xs: 0, md: '10px' },
                                                     display: 'flex',
                                                     flexDirection: 'column',
-                                                    gap: { xs: 1.5, sm: 0 },
+                                                    gap: { xs: 0.5, sm: 0 },
                                                 }}
                                             >
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                        lineHeight: '19px',
-                                                        letterSpacing: '0.05em',
-                                                        marginBottom: '16px',
-                                                    }}
-                                                >
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                            lineHeight: '19px',
+                                                            letterSpacing: '0.05em',
+                                                            marginBottom: '16px',
+                                                        }}
+                                                    ></li>
                                                     50% - ICO
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                        lineHeight: '19px',
-                                                        letterSpacing: '0.05em',
-                                                        marginBottom: '16px',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                            lineHeight: '19px',
+                                                            letterSpacing: '0.05em',
+                                                            marginBottom: '16px',
+                                                        }}
+                                                    ></li>
                                                     20% - Pre-ICO
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                        lineHeight: '19px',
-                                                        letterSpacing: '0.05em',
-                                                        marginBottom: '16px',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                            lineHeight: '19px',
+                                                            letterSpacing: '0.05em',
+                                                            marginBottom: '16px',
+                                                        }}
+                                                    ></li>
                                                     10% - Founders & Team
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                        lineHeight: '19px',
-                                                        letterSpacing: '0.05em',
-                                                        marginBottom: '16px',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                            lineHeight: '19px',
+                                                            letterSpacing: '0.05em',
+                                                            marginBottom: '16px',
+                                                        }}
+                                                    ></li>
                                                     06% - Reserve & Bonus Tokens for Pre-ICO
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                        lineHeight: '19px',
-                                                        letterSpacing: '0.05em',
-                                                        marginBottom: '16px',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                            lineHeight: '19px',
+                                                            letterSpacing: '0.05em',
+                                                            marginBottom: '16px',
+                                                        }}
+                                                    ></li>
                                                     05% - Advisers
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        fontSize: 'inherit',
-                                                        fontWeight: 'inherit',
-                                                        lineHeight: '19px',
-                                                        letterSpacing: '0.05em',
-                                                        marginBottom: '16px',
-                                                    }}
-                                                >
+                                                </Stack>
+                                                <Stack direction="row" spacing={1}>
+                                                    <li
+                                                        style={{
+                                                            fontSize: 'inherit',
+                                                            fontWeight: 'inherit',
+                                                            lineHeight: '19px',
+                                                            letterSpacing: '0.05em',
+                                                            marginBottom: '16px',
+                                                        }}
+                                                    ></li>
                                                     03% - Bounty
-                                                </li>
+                                                </Stack>
                                             </Box>
                                         </Box>
                                     </Grid>

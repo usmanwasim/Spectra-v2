@@ -28,7 +28,7 @@ const data = [
 export default function Funds() {
     return (
         <>
-            <Box py={{ xs: 5, sm: 7, md: 10 }} position="relative">
+            <Box py={{ xs: 5, sm: 7, md: 10 }} position="relative" id="funds">
                 <Box
                     width={{ xs: '60%', md: '35%' }}
                     height={{ xs: 'auto', md: '80%' }}

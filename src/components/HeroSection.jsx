@@ -27,7 +27,7 @@ export default function HeroSection() {
                         // background:
                         //     'linear-gradient(98.72deg, #650B9D10 32.87%, #9876D110 104.38%), conic-gradient(from 229.69deg at 50% 50%, #650B9D10 0deg, rgba(94, 60, 115, 0) 360deg), linear-gradient(0deg, #FFFFFF10, #FFFFFF10)',
                         width: '100%',
-                        height: '95%',
+                        height: '99%',
                         position: 'absolute',
                         top: '50%',
                         left: '50%',

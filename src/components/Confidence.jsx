@@ -187,8 +187,8 @@ export default function Confidence() {
                                     width="60%"
                                     style={{
                                         position: 'absolute',
-                                        top: isMatch ? '20%' : '10%',
-                                        left: isMatch ? '-5%' : '-10%',
+                                        top: '25%',
+                                        left: '-10%',
                                         right: '0%',
                                         bottom: '0%',
                                         zIndex: 10,

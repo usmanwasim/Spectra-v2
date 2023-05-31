@@ -24,13 +24,12 @@ export default function Roadmap() {
                 <Box
                     sx={{
                         overflowX: 'auto',
-                        // width: '95%',
-                        mx: 'auto',
-                        // height: { xs: '70vh', sm: '100vh' },
+                        display: {sx: 'block', md: 'flex'},
+                        justifyContent: 'center',
                         '&::-webkit-scrollbar': { display: 'none' },
                     }}
                 >
-                    <img src={roadmap} alt="" style={{ minWidth: '720px', width: '100%' }} />
+                    <img src={roadmap} alt="" style={{ minWidth: '720px', width: '100%', maxWidth: '1200px' }} />
                 </Box>
             </Box>
         </>

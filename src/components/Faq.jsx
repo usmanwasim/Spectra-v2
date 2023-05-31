@@ -7,14 +7,14 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import RightIcon from '@mui/icons-material/ChevronRight';
 import DownIcon from '@mui/icons-material/KeyboardArrowUp';
 
-let accordiantData = [
+const accordiantData = [
     {
         heading: 'What is Spectra VC?',
         detail: 'Spectra VC is a venture capital fund that invests in blockchain and technology-based projects with the goal of generating returns for investors',
     },
     {
         heading: 'What are the benefits of investing in Spectra VC?',
-        detail: 'By investing in Spectra VC, you gain access to income-generating opportunities in the blockchain and technology space without any initial capital requirements. Our sustainable management practices and strict investment criteria ensure that your investment is managed ethically and responsibly.',
+        detail: 'Investing in Spectra VC brings exclusive exclusive pre-ICOs opportunity, voting rights, higher success rates, quarterly dividends, and expertise in blockchain and technology. With a proven track record, strategic partnerships, and a deflationary token model, Spectra VC offers a lucrative investment opportunity for strong returns in a thriving blockchain ecosystem.',
     },
     {
         heading: 'How does Spectra VC generate returns for investors?',
@@ -25,7 +25,7 @@ let accordiantData = [
         detail: 'No, there is no minimum investment required to invest in Spectra VC.',
     },
 ];
-let accordiantData1 = [
+const accordiantData1 = [
     {
         heading: 'How can I track the performance of my investment in Spectra VC?',
         detail: 'Spectra VC provides regular updates and reports on the performance of our investments to our investors.',

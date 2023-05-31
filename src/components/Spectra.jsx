@@ -67,7 +67,7 @@ export default function Spectra() {
                                     width="30%"
                                     style={{
                                         position: 'absolute',
-                                        top: isMatch ? '11%' : '5%',
+                                        top: isMatch ? '10%' : '5%',
                                         left: '58%',
                                         right: '0%',
                                         bottom: '0%',

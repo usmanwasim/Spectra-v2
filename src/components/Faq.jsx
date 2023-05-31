@@ -20,12 +20,12 @@ const accordiantData = [
         heading: 'How does Spectra VC generate returns for investors?',
         detail: 'Spectra VC invests in promising blockchain and technology-based projects, and through the success of these projects, generates returns for investors.',
     },
+];
+const accordiantData1 = [
     {
         heading: 'Is there a minimum investment required to invest in Spectra VC?',
         detail: 'No, there is no minimum investment required to invest in Spectra VC.',
     },
-];
-const accordiantData1 = [
     {
         heading: 'How can I track the performance of my investment in Spectra VC?',
         detail: 'Spectra VC provides regular updates and reports on the performance of our investments to our investors.',
@@ -40,7 +40,7 @@ const accordiantData1 = [
     },
 ];
 export default function Faq() {
-    const [expanded, setExpanded] = useState(3);
+    const [expanded, setExpanded] = useState(0);
     return (
         <>
             <Box py={{ xs: 10, sm: 15, md: 20 }}>

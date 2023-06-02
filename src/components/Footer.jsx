@@ -4,6 +4,14 @@ import React from 'react';
 import logo from '../assets/Footer-logo.png';
 
 export default function Footer() {
+    const redirectToPreSale = () => {
+        window.open('https://purchase.vcspectra.io/login', '_blank');
+    };
+
+    const redirectToWhitePaper = () => {
+        window.open('/spectra-whitepaper.pdf', '_blank');
+    };
+
     return (
         <>
             <Box bgcolor="#650B9D">
@@ -58,6 +66,7 @@ export default function Footer() {
                                             color: '#ffffff',
                                         },
                                     }}
+                                    onClick={redirectToWhitePaper}
                                 >
                                     Whitepaper
                                 </Button>
@@ -74,6 +83,7 @@ export default function Footer() {
                                         borderRadius: '0px',
                                         textTransform: 'capitalize',
                                     }}
+                                    onClick={redirectToPreSale}
                                 >
                                     Join Presale
                                 </Button>

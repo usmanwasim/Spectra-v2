@@ -32,6 +32,10 @@ const data1 = [
 ];
 
 export default function Different() {
+    const redirectToPreSale = () => {
+        window.open('https://purchase.vcspectra.io/login', '_blank');
+    };
+
     return (
         <>
             <Box sx={{ py: { xs: 5, sm: 7, md: 10 } }}>
@@ -82,6 +86,7 @@ export default function Different() {
                                             color: '#650B9D',
                                         },
                                     }}
+                                    onClick={redirectToPreSale}
                                 >
                                     get started <ArrowForwardIcon />
                                 </Button>

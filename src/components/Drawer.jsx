@@ -19,6 +19,14 @@ export default function MobileDrawer() {
         setState({ ...state, [anchor]: open });
     };
 
+    const redirectToPreSale = () => {
+        window.open('https://purchase.vcspectra.io/login', '_blank');
+    };
+
+    const redirectToWhitePaper = () => {
+        window.open('/spectra-whitepaper.pdf', '_blank');
+    };
+
     const list = (anchor) => (
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 280, p: 2 }}
@@ -70,6 +78,7 @@ export default function MobileDrawer() {
                         width: { xs: '120px', sm: '150px' },
                         textTransform: 'capitalize',
                     }}
+                    onClick={redirectToPreSale}
                 >
                     Invest Now
                 </Button>
@@ -87,6 +96,7 @@ export default function MobileDrawer() {
                         width: { xs: '120px', sm: '150px' },
                         textTransform: 'capitalize',
                     }}
+                    onClick={redirectToWhitePaper}
                 >
                     Whitepaper
                 </Button>

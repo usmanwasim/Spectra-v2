@@ -10,6 +10,14 @@ export default function HeroSection() {
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
 
+    const redirectToPreSale = () => {
+        window.open('https://purchase.vcspectra.io/login', '_blank');
+    };
+
+    const redirectToWhitePaper = () => {
+        window.open('/spectra-whitepaper.pdf', '_blank');
+    };
+
     return (
         <>
             <Box
@@ -334,6 +342,7 @@ export default function HeroSection() {
                                     borderRadius: '0px',
                                     textTransform: 'uppercase',
                                 }}
+                                onClick={redirectToWhitePaper}
                             >
                                 Whitepaper
                             </Button>
@@ -354,6 +363,7 @@ export default function HeroSection() {
                                         color: '#ffffff',
                                     },
                                 }}
+                                onClick={redirectToPreSale}
                             >
                                 Buy Now
                             </Button>

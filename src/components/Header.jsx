@@ -5,6 +5,14 @@ import MobileDrawer from './Drawer';
 import logo from '../assets/logo.svg';
 
 export default function Header() {
+    const redirectToPreSale = () => {
+        window.open('https://purchase.vcspectra.io/login', '_blank');
+    };
+
+    const redirectToWhitePaper = () => {
+        window.open('/spectra-whitepaper.pdf', '_blank');
+    };
+
     return (
         <>
             <Container>
@@ -19,23 +27,35 @@ export default function Header() {
                     </Box>
                     <Stack direction="row" spacing={{ xs: 1, sm: 1, md: 2 }} alignItems="center">
                         <Hidden mdDown>
-                            {['Whitepaper', 'Audits'].map((val, i) => (
-                                <Typography
-                                    key={i}
-                                    sx={{
-                                        fontFamily: 'Aileron',
-                                        fontStyle: 'normal',
-                                        fontWeight: '600 ',
-                                        fontSize: { xs: '12px', sm: '15px', md: '17px' },
-                                        textAlign: 'center',
-                                        textTransform: 'capatilize',
+                            <Typography
+                                sx={{
+                                    fontFamily: 'Aileron',
+                                    fontStyle: 'normal',
+                                    fontWeight: '600 ',
+                                    fontSize: { xs: '12px', sm: '15px', md: '17px' },
+                                    textAlign: 'center',
+                                    textTransform: 'capatilize',
+                                    cursor: 'pointer',
+                                    color: '#650B9D',
+                                }}
+                                onClick={redirectToWhitePaper}
+                            >
+                                Whitepaper
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    fontFamily: 'Aileron',
+                                    fontStyle: 'normal',
+                                    fontWeight: '600 ',
+                                    fontSize: { xs: '12px', sm: '15px', md: '17px' },
+                                    textAlign: 'center',
+                                    textTransform: 'capatilize',
 
-                                        color: '#650B9D',
-                                    }}
-                                >
-                                    {val}
-                                </Typography>
-                            ))}
+                                    color: '#650B9D',
+                                }}
+                            >
+                                Audits
+                            </Typography>
 
                             <Button
                                 sx={{
@@ -54,6 +74,7 @@ export default function Header() {
                                         color: '#650B9D',
                                     },
                                 }}
+                                onClick={redirectToPreSale}
                             >
                                 Invest Now
                             </Button>
@@ -71,6 +92,7 @@ export default function Header() {
                                     color: '#650B9D',
                                     borderRadius: '0px',
                                 }}
+                                onClick={redirectToWhitePaper}
                             >
                                 Whitepaper
                             </Button>

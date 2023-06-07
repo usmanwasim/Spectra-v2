@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import { Box, Container, Grid, Stack, Typography, useTheme, useMediaQuery } from '@mui/material';
 
 import spectraLaptop from '../assets/spectra-laptop.png';
-import spectraTab from '../assets/spectra-tab.svg';
+import spectraTab from '../assets/spectra-tab.png';
 import spectraCircle from '../assets/spectra-circle.svg';
 
 import spectrabg from '../assets/spectra-bg.svg';
@@ -60,11 +60,11 @@ export default function Spectra() {
                                 <img
                                     src={spectraTab}
                                     alt="spectra"
-                                    width="40%"
+                                    width="25%"
                                     style={{
                                         position: 'absolute',
-                                        top: '33%',
-                                        left: '8%',
+                                        top: '35%',
+                                        left: '15%',
                                         right: '0%',
                                         bottom: '0%',
                                         zIndex: 10,

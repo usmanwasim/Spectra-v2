@@ -1,17 +1,14 @@
-import { Box, Container, Grid, Typography, useTheme, useMediaQuery } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import confidenceMobile from '../assets/confidence-mobile.svg';
-import confidenceTab from '../assets/confidence-tab.svg';
+import confidenceMobile from '../assets/confidence-mobile.png';
+import confidenceTab from '../assets/confidence-tab.png';
 import confidenceShadow from '../assets/confidence-shadow.svg';
 import confidencearrow from '../assets/confidence-arrow.svg';
 
 export default function Confidence() {
-    const theme = useTheme();
-    const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
-
     useEffect(() => {
         AOS.init({
             delay: 500,

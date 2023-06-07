@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
-import fund1 from '../assets/fund1.svg';
+import fund1 from '../assets/fund1.png';
 import fund2 from '../assets/fund2.png';
 import fund3 from '../assets/fund3.png';
 import fundbg from '../assets/fundbg.svg';

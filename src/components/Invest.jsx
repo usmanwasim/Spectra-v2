@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 
-import invest1 from '../assets/invest1.png';
-import invest2 from '../assets/invest2.png';
-import invest3 from '../assets/invest3.png';
+import invest1 from '../assets/invest1.svg';
+import invest2 from '../assets/invest2.svg';
+import invest3 from '../assets/invest3.svg';
 
 const data = [
     {
@@ -24,11 +26,17 @@ const data = [
 ];
 
 export default function Invest() {
+    useEffect(() => {
+        AOS.init({
+            delay: 500,
+        });
+    }, []);
     return (
         <>
             <Box py={{ xs: 5, sm: 7, md: 10 }} bgcolor="#650B9D">
                 <Container>
                     <Typography
+                        data-aos="flip-right"
                         sx={{
                             fontFamily: 'Aileron',
                             fontStyle: 'normal',
@@ -58,6 +66,7 @@ export default function Invest() {
                                 }}
                             >
                                 <Box
+                                    data-aos="fade-up"
                                     p={{ xs: 2, sm: 4 }}
                                     sx={{
                                         border: '2px solid #ffffff',

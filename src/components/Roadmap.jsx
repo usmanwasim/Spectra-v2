@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Box, Typography } from '@mui/material';
 
-import roadmap from '../assets/roadmap.png';
+import roadmap from '../assets/roadmap.svg';
 
 export default function Roadmap() {
+    useEffect(() => {
+        AOS.init({
+            delay: 200,
+        });
+    }, []);
     return (
         <>
             <Box py={{ xs: 5, sm: 7, md: 10 }}>
                 <Typography
+                    data-aos="flip-left"
                     sx={{
                         fontFamily: 'Aileron',
                         fontStyle: 'normal',
@@ -22,14 +30,19 @@ export default function Roadmap() {
                     Roadmap
                 </Typography>
                 <Box
+                    data-aos="zoom-in-up"
                     sx={{
                         overflowX: 'auto',
-                        display: {sx: 'block', md: 'flex'},
+                        display: { sx: 'block', md: 'flex' },
                         justifyContent: 'center',
                         '&::-webkit-scrollbar': { display: 'none' },
                     }}
                 >
-                    <img src={roadmap} alt="" style={{ minWidth: '720px', width: '100%', maxWidth: '1200px' }} />
+                    <img
+                        src={roadmap}
+                        alt=""
+                        style={{ minWidth: '720px', width: '100%', maxWidth: '1200px' }}
+                    />
                 </Box>
             </Box>
         </>

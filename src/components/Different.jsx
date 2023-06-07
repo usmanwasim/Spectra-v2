@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import different1 from '../assets/different1.png';
-import different2 from '../assets/different2.png';
-import different3 from '../assets/different3.png';
-import different4 from '../assets/different4.png';
+import different1 from '../assets/different1.svg';
+import different2 from '../assets/different2.svg';
+import different3 from '../assets/different3.svg';
+import different4 from '../assets/different4.svg';
 
 const data = [
     {
@@ -35,6 +37,9 @@ export default function Different() {
     const redirectToPreSale = () => {
         window.open('https://purchase.vcspectra.io/login', '_blank');
     };
+    useEffect(() => {
+        AOS.init({});
+    }, []);
 
     return (
         <>
@@ -44,6 +49,7 @@ export default function Different() {
                         <Grid item xs={12} md={5}>
                             <Box>
                                 <Typography
+                                    data-aos="zoom-in-down"
                                     sx={{
                                         fontFamily: 'Aileron',
                                         fontStyle: 'normal',
@@ -59,6 +65,7 @@ export default function Different() {
                                     <span style={{ color: '#650B9D' }}>Different</span>
                                 </Typography>
                                 <Typography
+                                    data-aos="fade-up"
                                     sx={{
                                         fontFamily: 'Aileron',
                                         fontStyle: 'normal',
@@ -73,6 +80,7 @@ export default function Different() {
                                     offer quarterly dividends to align interests.
                                 </Typography>
                                 <Button
+                                    data-aos="zoom-in-up"
                                     sx={{
                                         fontFamily: 'Aileron',
                                         fontStyle: 'normal',
@@ -107,6 +115,7 @@ export default function Different() {
                                 >
                                     {data?.map(({ img, title, desc }, i) => (
                                         <Box
+                                            data-aos="zoom-in-down"
                                             key={i}
                                             p={{ xs: 2 }}
                                             sx={{
@@ -177,6 +186,7 @@ export default function Different() {
                                 >
                                     {data1?.map(({ img, title, desc }, i) => (
                                         <Box
+                                            data-aos="zoom-in-up"
                                             key={i}
                                             p={{ xs: 2 }}
                                             sx={{

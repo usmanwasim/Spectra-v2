@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Box, Container, Grid, Stack, Typography, useTheme, useMediaQuery } from '@mui/material';
 
 import spectraLaptop from '../assets/spectra-laptop.png';
-import spectraTab from '../assets/spectra-tab.png';
-import spectraCircle from '../assets/spectra-circle.png';
+import spectraTab from '../assets/spectra-tab.svg';
+import spectraCircle from '../assets/spectra-circle.svg';
 
-import spectrabg from '../assets/spectra-bg.png';
-import spectra1 from '../assets/spectra1.png';
-import spectra2 from '../assets/spectra2.png';
-import spectra3 from '../assets/spectra3.png';
-import spectra4 from '../assets/spectra4.png';
+import spectrabg from '../assets/spectra-bg.svg';
+import spectra1 from '../assets/spectra1.svg';
+import spectra2 from '../assets/spectra2.svg';
+import spectra3 from '../assets/spectra3.svg';
+import spectra4 from '../assets/spectra4.svg';
 
 export default function Spectra() {
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+    useEffect(() => {
+        AOS.init({
+            delay: 500,
+        });
+    }, []);
+
     return (
         <>
             <Box sx={{ py: { xs: 5, sm: 7, md: 10 } }}>
                 <Container>
                     <Typography
+                        data-aos="flip-down"
                         sx={{
                             fontFamily: 'Aileron',
                             fontStyle: 'normal',
@@ -35,6 +44,7 @@ export default function Spectra() {
                     <Grid container spacing={{ xs: 4, sm: 7, md: 10 }} alignItems="center">
                         <Grid item xs={12} md={6}>
                             <Box
+                                data-aos="fade-rigth"
                                 sx={{
                                     position: 'relative',
                                     background: `url(${spectraLaptop})`,
@@ -91,7 +101,7 @@ export default function Spectra() {
                             >
                                 <img src={spectrabg} alt="" width="100%" height="100%" />
                             </Box>
-                            <Box>
+                            <Box data-aos="fade-up">
                                 <Typography
                                     sx={{
                                         fontFamily: 'Aileron',
@@ -129,7 +139,7 @@ export default function Spectra() {
                                     </Typography>
                                 </Stack>
                             </Box>
-                            <Box mt={{ xs: 2, sm: 3 }}>
+                            <Box mt={{ xs: 2, sm: 3 }} data-aos="fade-up">
                                 <Typography
                                     sx={{
                                         fontFamily: 'Aileron',
@@ -164,7 +174,7 @@ export default function Spectra() {
                                     </Typography>
                                 </Stack>
                             </Box>
-                            <Box mt={{ xs: 2, sm: 3 }}>
+                            <Box mt={{ xs: 2, sm: 3 }} data-aos="fade-up">
                                 <Typography
                                     sx={{
                                         fontFamily: 'Aileron',
@@ -201,7 +211,7 @@ export default function Spectra() {
                                     </Typography>
                                 </Stack>
                             </Box>
-                            <Box mt={{ xs: 2, sm: 3 }}>
+                            <Box mt={{ xs: 2, sm: 3 }} data-aos="fade-up">
                                 <Typography
                                     sx={{
                                         fontFamily: 'Aileron',

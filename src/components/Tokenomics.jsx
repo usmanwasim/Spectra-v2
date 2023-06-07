@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-import tokenimg from '../assets/tokenimg.png';
-import tokenchart from '../assets/token-chart.png';
-import tokenchart1 from '../assets/token-chart1.png';
+import tokenimg from '../assets/tokenimg.svg';
+import tokenchart from '../assets/token-chart.svg';
+import tokenchart1 from '../assets/token-chart1.svg';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Tokenomics() {
@@ -15,11 +17,18 @@ export default function Tokenomics() {
         setValue(newValue);
     };
 
+    useEffect(() => {
+        AOS.init({
+            delay: 500,
+        });
+    }, []);
+
     return (
         <>
             <Box py={{ xs: 5, sm: 7, md: 10 }} bgcolor="#CDBFE2">
                 <Container>
                     <Typography
+                        data-aos="flip-left"
                         sx={{
                             fontFamily: 'Aileron',
                             fontStyle: 'normal',
@@ -33,6 +42,7 @@ export default function Tokenomics() {
                         Tokenomics
                     </Typography>
                     <Box
+                        data-aos="fade-up"
                         sx={{
                             border: '1px solid #650B9D',
                             borderRadius: '10px',
@@ -113,12 +123,13 @@ export default function Tokenomics() {
                                                 width="100%"
                                             />
                                             <Box
+                                                data-aos="zoom-in-up"
                                                 sx={{
                                                     width: { xs: '20%', sm: '15%', md: '28%' },
                                                     height: { xs: '20%', sm: '15%', md: '28%' },
                                                     position: 'absolute',
                                                     top: { xs: '95%', md: '35%' },
-                                                    left: { xs: '40%', md: '100%' },
+                                                    left: { xs: '40%', md: '90%' },
                                                     transform: {
                                                         xs: 'rotate(90deg)',
                                                         md: 'rotate(0deg)',
@@ -147,7 +158,7 @@ export default function Tokenomics() {
                                             delay: 0.5,
                                         }}
                                     >
-                                        <Box>
+                                        <Box data-aos="fade-left">
                                             <Typography
                                                 sx={{
                                                     fontFamily: 'Aileron',
@@ -271,12 +282,13 @@ export default function Tokenomics() {
                                                 width="100%"
                                             />
                                             <Box
+                                                data-aos="zoom-in-up"
                                                 sx={{
                                                     width: { xs: '20%', sm: '15%', md: '28%' },
                                                     height: { xs: '20%', sm: '15%', md: '28%' },
                                                     position: 'absolute',
                                                     top: { xs: '92%', md: '35%' },
-                                                    left: { xs: '40%', md: '95%' },
+                                                    left: { xs: '40%', md: '80%' },
                                                     transform: {
                                                         xs: 'rotate(90deg)',
                                                         md: 'rotate(0deg)',
@@ -294,6 +306,7 @@ export default function Tokenomics() {
                                     </Grid>
                                     <Grid item xs={12} md={5}>
                                         <Box
+                                            data-aos="fade-left"
                                             component={motion.div}
                                             initial={{ opacity: 0, x: 100 }}
                                             animate={{ opacity: 1, x: 0 }}

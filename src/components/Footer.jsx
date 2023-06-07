@@ -1,7 +1,9 @@
 import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-import logo from '../assets/Footer-logo.png';
+import logo from '../assets/Footer-logo.svg';
 
 export default function Footer() {
     const redirectToPreSale = () => {
@@ -12,13 +14,19 @@ export default function Footer() {
         window.open('/spectra-whitepaper.pdf', '_blank');
     };
 
+    useEffect(() => {
+        AOS.init({
+            delay: 200,
+        });
+    }, []);
+
     return (
         <>
             <Box bgcolor="#650B9D">
                 <Container>
                     <Grid container spacing={5} alignItems="end" pb={{ xs: 3, sm: 4, md: 5 }}>
                         <Grid item xs={12} sm={6}>
-                            <Box>
+                            <Box data-aos="fade-down">
                                 <Box width={{ xs: '105px' }}>
                                     <img src={logo} alt="logo" width="100%" />
                                 </Box>
@@ -45,6 +53,7 @@ export default function Footer() {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Stack
+                                data-aos="fade-up"
                                 direction={{ xs: 'row' }}
                                 justifyContent={{ xs: 'center', sm: 'right' }}
                                 spacing={2}

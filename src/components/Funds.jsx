@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
-import fund1 from '../assets/fund1.png';
+import fund1 from '../assets/fund1.svg';
 import fund2 from '../assets/fund2.png';
 import fund3 from '../assets/fund3.png';
-import fundbg from '../assets/fundbg.png';
+import fundbg from '../assets/fundbg.svg';
 import Partners from './Partners';
 
 const data = [
@@ -26,6 +28,11 @@ const data = [
 ];
 
 export default function Funds() {
+    useEffect(() => {
+        AOS.init({
+            delay: 300,
+        });
+    }, []);
     return (
         <>
             <Box py={{ xs: 5, sm: 7, md: 10 }} position="relative" id="funds">
@@ -41,6 +48,7 @@ export default function Funds() {
                 </Box>
                 <Container>
                     <Typography
+                        data-aos="flip-left"
                         sx={{
                             fontFamily: 'Aileron',
                             fontStyle: 'normal',
@@ -58,7 +66,7 @@ export default function Funds() {
                     <Grid container spacing={{ xs: 3, sm: 5, md: 7 }}>
                         {data?.map(({ img, title, desc }, i) => (
                             <Grid item xs={12} sm={6} md={4} key={i}>
-                                <Box>
+                                <Box data-aos="fade-up">
                                     <Box>
                                         <img src={img} alt="" width="100%" />
                                     </Box>

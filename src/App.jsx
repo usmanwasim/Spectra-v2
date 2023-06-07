@@ -12,10 +12,17 @@ import Tokenomics from './components/Tokenomics';
 import Roadmap from './components/Roadmap';
 import Faq from './components/Faq';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     return (
         <>
             <Box position="relative" overflow="hidden">

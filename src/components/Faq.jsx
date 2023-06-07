@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
@@ -6,6 +6,9 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 
 import RightIcon from '@mui/icons-material/ChevronRight';
 import DownIcon from '@mui/icons-material/KeyboardArrowUp';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const accordiantData = [
     {
@@ -41,11 +44,17 @@ const accordiantData1 = [
 ];
 export default function Faq() {
     const [expanded, setExpanded] = useState(0);
+    useEffect(() => {
+        AOS.init({
+            delay: 500,
+        });
+    }, []);
     return (
         <>
             <Box py={{ xs: 10, sm: 15, md: 20 }}>
                 <Container>
                     <Typography
+                        data-aos="fade-up"
                         sx={{
                             fontFamily: 'Aileron',
                             fontStyle: 'normal',
@@ -60,7 +69,7 @@ export default function Faq() {
                         FAQs
                     </Typography>
                     <Grid container spacing={{ xs: 0, md: 5 }}>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={6} data-aos="fade-right">
                             {accordiantData?.map(({ heading, detail }, i) => (
                                 <MuiAccordion
                                     key={i}
@@ -112,7 +121,7 @@ export default function Faq() {
                                 </MuiAccordion>
                             ))}
                         </Grid>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={6} data-aos="fade-left">
                             {accordiantData1?.map(({ heading, detail }, i) => (
                                 <MuiAccordion
                                     key={i}

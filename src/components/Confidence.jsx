@@ -1,20 +1,29 @@
 import { Box, Container, Grid, Typography, useTheme, useMediaQuery } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-import confidenceMobile from '../assets/confidence-mobile.png';
-import confidenceTab from '../assets/confidence-tab.png';
-import confidenceShadow from '../assets/confidence-shadow.png';
-import confidencearrow from '../assets/confidence-arrow.png';
+import confidenceMobile from '../assets/confidence-mobile.svg';
+import confidenceTab from '../assets/confidence-tab.svg';
+import confidenceShadow from '../assets/confidence-shadow.svg';
+import confidencearrow from '../assets/confidence-arrow.svg';
 
 export default function Confidence() {
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+
+    useEffect(() => {
+        AOS.init({
+            delay: 500,
+        });
+    }, []);
 
     return (
         <>
             <Box sx={{ my: { xs: 5, sm: 7, md: 10 } }}>
                 <Container>
                     <Typography
+                        data-aos="flip-up"
                         sx={{
                             fontFamily: 'Aileron',
                             fontStyle: 'normal',
@@ -32,7 +41,7 @@ export default function Confidence() {
                     </Typography>
                     <Grid container spacing={2} alignItems="center">
                         <Grid item xs={12} md={6}>
-                            <Box>
+                            <Box data-aos="fade-up">
                                 <Typography
                                     sx={{
                                         fontFamily: 'Aileron',
@@ -87,7 +96,7 @@ export default function Confidence() {
                                     />
                                 </Box>
                             </Box>
-                            <Box>
+                            <Box data-aos="fade-up">
                                 <Typography
                                     sx={{
                                         fontFamily: 'Aileron',
@@ -140,7 +149,7 @@ export default function Confidence() {
                                     />
                                 </Box>
                             </Box>
-                            <Box>
+                            <Box data-aos="fade-up">
                                 <Typography
                                     sx={{
                                         fontFamily: 'Aileron',
@@ -170,6 +179,7 @@ export default function Confidence() {
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Box
+                                data-aos="zoom-in-up"
                                 sx={{
                                     position: 'relative',
                                     background: `url(${confidenceMobile})`,

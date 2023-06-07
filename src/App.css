@@ -51,12 +51,12 @@ body {
 .animation:nth-child(0) {
     animation-delay: 5s;
     left: 10%;
-    width: 380px;
+    width: 170px;
 }
 .animation:nth-child(1) {
     animation-delay: 10s;
     left: 32%;
-    width: 320px;
+    width: 190px;
 }
 .animation:nth-child(2s) {
     animation-delay: 15s;

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Marquee from 'react-fast-marquee';
-import img1 from '../assets/pertner1.svg';
+import img1 from '../assets/pertner1.png';
 import img2 from '../assets/pertner2.svg';
 import img3 from '../assets/pertner3.svg';
 import img4 from '../assets/pertner4.svg';

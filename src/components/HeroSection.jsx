@@ -49,7 +49,7 @@ export default function HeroSection() {
                     loop
                     style={{
                         position: 'relative',
-                        transform: isMatch ? 'translate(-50%, -50%)' : 'unset',
+                        transform: isMatch ? 'translate(-50%, 0%)' : 'unset',
                         minWidth: '100%',
                         minHeight: '100%',
                         width: isMatch ? 'auto' : '100%',

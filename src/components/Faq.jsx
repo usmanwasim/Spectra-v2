@@ -121,7 +121,7 @@ export default function Faq() {
                                 </MuiAccordion>
                             ))}
                         </Grid>
-                        <Grid item xs={12} md={6} data-aos="fade-left">
+                        <Grid item xs={12} md={6} data-aos="fade-right">
                             {accordiantData1?.map(({ heading, detail }, i) => (
                                 <MuiAccordion
                                     key={i}

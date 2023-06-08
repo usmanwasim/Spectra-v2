@@ -53,7 +53,6 @@ export default function Footer() {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Stack
-                                data-aos="fade-up"
                                 direction={{ xs: 'row' }}
                                 justifyContent={{ xs: 'center', sm: 'right' }}
                                 spacing={2}
